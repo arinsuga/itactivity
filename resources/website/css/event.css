@@ -1,0 +1,41 @@
+  /* MAIN EVENT
+  -------------------------------------------------- */
+  .event-container {
+    border: solid 1px #231916;
+    border-radius: 15px;
+    min-height: 10%;
+    padding: 2rem;
+  }
+
+  .event-item {
+    margin-bottom: 1rem;
+  }
+
+  .event-item a h1,
+  .event-item a h2,
+  .event-item a h3,
+  .event-item a h4,
+  .event-item a h5 {
+    color: #231916;
+  }
+
+  .event-item a:link {
+    text-decoration-line: none;
+  }
+
+  .event-more-item a:link {
+    color:#009944;
+  }
+
+
+/* ================================================== */  
+
+
+@media only screen and (max-width: 768px) {
+
+  .event-partner-list .partner-item {
+    width: 30%;
+    padding: 1rem;
+  }
+
+}

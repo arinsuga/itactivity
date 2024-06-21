@@ -3,11 +3,13 @@
 namespace Arins\Bo\Repositories\User;
 
 use App\User;
-use Arins\Repositories\Data\EloquentRepository;
+use Arins\Repositories\BaseRepositoryInterface;
+use Arins\Repositories\BaseRepository;
 use Arins\Bo\Repositories\User\UserRepositoryInterface;
 
-class UserRepository extends EloquentRepository
-                     implements UserRepositoryInterface
+class UserRepository extends BaseRepository
+                     implements BaseRepositoryInterface,
+                                UserRepositoryInterface
 
 // class UserRepository implements UserRepositoryInterface
                                 
@@ -22,12 +24,6 @@ class UserRepository extends EloquentRepository
     public function all()
     {
         return $this->data->where('bo', false)->get();
-        //return 'Berhasil allBo';
-    }
-
-    public function dnb()
-    {
-        return $this->data->where('dept', 'DNB')->get();
         //return 'Berhasil allBo';
     }
 

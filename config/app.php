@@ -81,8 +81,8 @@ return [
     |
     */
 
-    //'locale' => 'en',
-    'locale' => 'id',
+    'locale' => 'en',
+    //'locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -183,8 +183,7 @@ return [
          */
         Arins\Providers\FacadeServiceProvider::class,
         Arins\Providers\RouteServiceProvider::class,
-        Arins\Providers\DataRepositoryServiceProvider::class,
-        Arins\Providers\OtherRepositoryServiceProvider::class,
+        Arins\Providers\RepositoryServiceProvider::class,
         
     ],
 

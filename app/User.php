@@ -37,6 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime:d/m/Y',
     ];
 
+    public function activities()
+    {
+        return $this->hasMany('Arins\Models\Activity');
+    }
+
     public function apps()
     {
         $ates = config('a1company.dateformat');
@@ -115,11 +120,6 @@ class User extends Authenticatable
         }
 
         return false;
-    }
-
-    public function attends()
-    {
-        return $this->hasMany('Arins\Fo\Models\Attend');
     }
 
 }

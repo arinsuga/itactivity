@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class TemplateServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * Register services and helper.
      *
      * @return void
      */
@@ -17,7 +17,7 @@ class TemplateServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap services.
+     * Bootstrap services and helper.
      *
      * @return void
      */

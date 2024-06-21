@@ -1,0 +1,31 @@
+  /* MAIN BRANCH
+  -------------------------------------------------- */
+.branch {
+    min-height: 100vh;
+}
+
+.branch-partner-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.branch-partner-list .partner-item {
+  width: 15%;
+  padding: 1rem;
+}
+
+.branch-partner-list img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .branch-partner-list .partner-item {
+    width: 30%;
+    padding: 1rem;
+  }
+
+}

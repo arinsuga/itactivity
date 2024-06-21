@@ -1,1 +1,2217 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{3:function(e,t){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(e){"object"==typeof window&&(n=window)}e.exports=n},5:function(e,t,n){n(6),n(9),e.exports=n(54)},54:function(e,t){},6:function(e,t,n){window.$=window.jQuery=n(0),n(2),n(1),n(4),n(7)},7:function(e,t,n){"use strict";function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n.r(t),n.d(t,"ControlSidebar",(function(){return o})),n.d(t,"Layout",(function(){return s})),n.d(t,"PushMenu",(function(){return l})),n.d(t,"Treeview",(function(){return u})),n.d(t,"DirectChat",(function(){return h})),n.d(t,"TodoList",(function(){return g})),n.d(t,"CardWidget",(function(){return v})),n.d(t,"CardRefresh",(function(){return b})),n.d(t,"Dropdown",(function(){return w})),n.d(t,"Toasts",(function(){return x}));var o=function(e){var t="ControlSidebar",n="lte.controlsidebar",o=".".concat(n),a=e.fn[t],s={COLLAPSED:"collapsed".concat(o),EXPANDED:"expanded".concat(o)},r=".control-sidebar",l=".control-sidebar-content",c='[data-widget="control-sidebar"]',u=".main-header",d=".main-footer",h="control-sidebar-animate",f="control-sidebar-open",g="control-sidebar-slide-open",p="layout-fixed",y="layout-navbar-fixed",v="layout-sm-navbar-fixed",m="layout-md-navbar-fixed",_="layout-lg-navbar-fixed",b="layout-xl-navbar-fixed",C="layout-footer-fixed",w="layout-sm-footer-fixed",E="layout-md-footer-fixed",x="layout-lg-footer-fixed",D="layout-xl-footer-fixed",k={controlsidebarSlide:!0,scrollbarTheme:"os-theme-light",scrollbarAutoHide:"l"},I=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._element=e,this._config=n,this._init()}var o,a,c;return o=t,c=[{key:"_jQueryInterface",value:function(i){return this.each((function(){var o=e(this).data(n),a=e.extend({},k,e(this).data());if(o||(o=new t(this,a),e(this).data(n,o)),"undefined"===o[i])throw new Error("".concat(i," is not a function"));o[i]()}))}}],(a=[{key:"collapse",value:function(){this._config.controlsidebarSlide?(e("html").addClass(h),e("body").removeClass(g).delay(300).queue((function(){e(r).hide(),e("html").removeClass(h),e(this).dequeue()}))):e("body").removeClass(f);var t=e.Event(s.COLLAPSED);e(this._element).trigger(t)}},{key:"show",value:function(){this._config.controlsidebarSlide?(e("html").addClass(h),e(r).show().delay(10).queue((function(){e("body").addClass(g).delay(300).queue((function(){e("html").removeClass(h),e(this).dequeue()})),e(this).dequeue()}))):e("body").addClass(f);var t=e.Event(s.EXPANDED);e(this._element).trigger(t)}},{key:"toggle",value:function(){e("body").hasClass(f)||e("body").hasClass(g)?this.collapse():this.show()}},{key:"_init",value:function(){var t=this;this._fixHeight(),this._fixScrollHeight(),e(window).resize((function(){t._fixHeight(),t._fixScrollHeight()})),e(window).scroll((function(){(e("body").hasClass(f)||e("body").hasClass(g))&&t._fixScrollHeight()}))}},{key:"_fixScrollHeight",value:function(){var t={scroll:e(document).height(),window:e(window).height(),header:e(u).outerHeight(),footer:e(d).outerHeight()},n=Math.abs(t.window+e(window).scrollTop()-t.scroll),i=e(window).scrollTop(),o=!1,a=!1;e("body").hasClass(p)&&((e("body").hasClass(y)||e("body").hasClass(v)||e("body").hasClass(m)||e("body").hasClass(_)||e("body").hasClass(b))&&"fixed"===e(u).css("position")&&(o=!0),(e("body").hasClass(C)||e("body").hasClass(w)||e("body").hasClass(E)||e("body").hasClass(x)||e("body").hasClass(D))&&"fixed"===e(d).css("position")&&(a=!0),0===i&&0===n?(e(r).css("bottom",t.footer),e(r).css("top",t.header),e(r+", "+r+" "+l).css("height",t.window-(t.header+t.footer))):n<=t.footer?!1===a?(e(r).css("bottom",t.footer-n),e(r+", "+r+" "+l).css("height",t.window-(t.footer-n))):e(r).css("bottom",t.footer):i<=t.header?!1===o?(e(r).css("top",t.header-i),e(r+", "+r+" "+l).css("height",t.window-(t.header-i))):e(r).css("top",t.header):!1===o?(e(r).css("top",0),e(r+", "+r+" "+l).css("height",t.window)):e(r).css("top",t.header))}},{key:"_fixHeight",value:function(){var t=e(window).height(),n=e(u).outerHeight(),i=e(d).outerHeight();if(e("body").hasClass(p)){var o=t-n;(e("body").hasClass(C)||e("body").hasClass(w)||e("body").hasClass(E)||e("body").hasClass(x)||e("body").hasClass(D))&&"fixed"===e(d).css("position")&&(o=t-n-i),e(r+" "+l).css("height",o),void 0!==e.fn.overlayScrollbars&&e(r+" "+l).overlayScrollbars({className:this._config.scrollbarTheme,sizeAutoCapable:!0,scrollbars:{autoHide:this._config.scrollbarAutoHide,clickScrolling:!0}})}}}])&&i(o.prototype,a),c&&i(o,c),Object.defineProperty(o,"prototype",{writable:!1}),t}();return e(document).on("click",c,(function(t){t.preventDefault(),I._jQueryInterface.call(e(this),"toggle")})),e.fn[t]=I._jQueryInterface,e.fn[t].Constructor=I,e.fn[t].noConflict=function(){return e.fn[t]=a,I._jQueryInterface},I}(jQuery);function a(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var s=function(e){var t="Layout",n=(".".concat("lte.layout"),e.fn[t]),i=".main-header",o=".main-sidebar",s=".main-sidebar .sidebar",r=".content-wrapper",l=".control-sidebar-content",c='[data-widget="control-sidebar"]',u=".main-footer",d='[data-widget="pushmenu"]',h=".login-box",f=".register-box",g="sidebar-focused",p="layout-fixed",y="login-page",v="register-page",m="control-sidebar-slide-open",_="control-sidebar-open",b={scrollbarTheme:"os-theme-light",scrollbarAutoHide:"l"},C=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._config=n,this._element=e,this._init()}var n,o,g;return n=t,g=[{key:"_jQueryInterface",value:function(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"";return this.each((function(){var i=e(this).data("lte.layout"),o=e.extend({},b,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.layout",i)),"init"!==n&&""!==n||i._init()}))}}],(o=[{key:"fixLayoutHeight",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,n=0;(e("body").hasClass(m)||e("body").hasClass(_)||"control_sidebar"==t)&&(n=e(l).height());var o={window:e(window).height(),header:0!==e(i).length?e(i).outerHeight():0,footer:0!==e(u).length?e(u).outerHeight():0,sidebar:0!==e(s).length?e(s).height():0,control_sidebar:n},a=this._max(o);a==o.control_sidebar?e(r).css("min-height",a):a==o.window?e(r).css("min-height",a-o.header-o.footer):e(r).css("min-height",a-o.header),e("body").hasClass(p)&&(e(r).css("min-height",a-o.header-o.footer),void 0!==e.fn.overlayScrollbars&&e(s).overlayScrollbars({className:this._config.scrollbarTheme,sizeAutoCapable:!0,scrollbars:{autoHide:this._config.scrollbarAutoHide,clickScrolling:!0}}))}},{key:"_init",value:function(){var t=this;if(this.fixLayoutHeight(),e(s).on("collapsed.lte.treeview expanded.lte.treeview",(function(){t.fixLayoutHeight()})),e(d).on("collapsed.lte.pushmenu shown.lte.pushmenu",(function(){t.fixLayoutHeight()})),e(c).on("collapsed.lte.controlsidebar",(function(){t.fixLayoutHeight()})).on("expanded.lte.controlsidebar",(function(){t.fixLayoutHeight("control_sidebar")})),e(window).resize((function(){t.fixLayoutHeight()})),e("body").hasClass(y)||e("body").hasClass(v)){if(e("body").hasClass(y)||e("body").hasClass(v)){var n=e(h+", "+f).height();e("body").css("min-height",n)}}else e("body, html").css("height","auto");e("body.hold-transition").removeClass("hold-transition")}},{key:"_max",value:function(e){var t=0;return Object.keys(e).forEach((function(n){e[n]>t&&(t=e[n])})),t}}])&&a(n.prototype,o),g&&a(n,g),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(window).on("load",(function(){C._jQueryInterface.call(e("body"))})),e(s+" a").on("focusin",(function(){e(o).addClass(g)})),e(s+" a").on("focusout",(function(){e(o).removeClass(g)})),e.fn[t]=C._jQueryInterface,e.fn[t].Constructor=C,e.fn[t].noConflict=function(){return e.fn[t]=n,C._jQueryInterface},C}(jQuery);function r(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var l=function(e){var t="PushMenu",n=".".concat("lte.pushmenu"),i=e.fn[t],o={COLLAPSED:"collapsed".concat(n),SHOWN:"shown".concat(n)},a={autoCollapseSize:992,enableRemember:!1,noTransitionAfterReload:!0},s='[data-widget="pushmenu"]',l="body",c="#sidebar-overlay",u=".wrapper",d="sidebar-collapse",h="sidebar-open",f=function(){function t(n,i){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._element=n,this._options=e.extend({},a,i),e(c).length||this._addOverlay(),this._init()}var i,s,f;return i=t,f=[{key:"_jQueryInterface",value:function(n){return this.each((function(){var i=e(this).data("lte.pushmenu"),o=e.extend({},a,e(this).data());i||(i=new t(this,o),e(this).data("lte.pushmenu",i)),"string"==typeof n&&n.match(/collapse|expand|toggle/)&&i[n]()}))}}],(s=[{key:"expand",value:function(){this._options.autoCollapseSize&&e(window).width()<=this._options.autoCollapseSize&&e(l).addClass(h),e(l).removeClass(d),this._options.enableRemember&&localStorage.setItem("remember".concat(n),h);var t=e.Event(o.SHOWN);e(this._element).trigger(t)}},{key:"collapse",value:function(){this._options.autoCollapseSize&&e(window).width()<=this._options.autoCollapseSize&&e(l).removeClass(h),e(l).addClass(d),this._options.enableRemember&&localStorage.setItem("remember".concat(n),d);var t=e.Event(o.COLLAPSED);e(this._element).trigger(t)}},{key:"toggle",value:function(){e(l).hasClass(d)?this.expand():this.collapse()}},{key:"autoCollapse",value:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this._options.autoCollapseSize&&(e(window).width()<=this._options.autoCollapseSize?e(l).hasClass(h)||this.collapse():1==t&&e(l).hasClass(h)&&e(l).removeClass(h))}},{key:"remember",value:function(){this._options.enableRemember&&(localStorage.getItem("remember".concat(n))==d?this._options.noTransitionAfterReload?e("body").addClass("hold-transition").addClass(d).delay(50).queue((function(){e(this).removeClass("hold-transition"),e(this).dequeue()})):e("body").addClass(d):this._options.noTransitionAfterReload?e("body").addClass("hold-transition").removeClass(d).delay(50).queue((function(){e(this).removeClass("hold-transition"),e(this).dequeue()})):e("body").removeClass(d))}},{key:"_init",value:function(){var t=this;this.remember(),this.autoCollapse(),e(window).resize((function(){t.autoCollapse(!0)}))}},{key:"_addOverlay",value:function(){var t=this,n=e("<div />",{id:"sidebar-overlay"});n.on("click",(function(){t.collapse()})),e(u).append(n)}}])&&r(i.prototype,s),f&&r(i,f),Object.defineProperty(i,"prototype",{writable:!1}),t}();return e(document).on("click",s,(function(t){t.preventDefault();var n=t.currentTarget;"pushmenu"!==e(n).data("widget")&&(n=e(n).closest(s)),f._jQueryInterface.call(e(n),"toggle")})),e(window).on("load",(function(){f._jQueryInterface.call(e(s))})),e.fn[t]=f._jQueryInterface,e.fn[t].Constructor=f,e.fn[t].noConflict=function(){return e.fn[t]=i,f._jQueryInterface},f}(jQuery);function c(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var u=function(e){var t="Treeview",n=".".concat("lte.treeview"),i=e.fn[t],o={SELECTED:"selected".concat(n),EXPANDED:"expanded".concat(n),COLLAPSED:"collapsed".concat(n),LOAD_DATA_API:"load".concat(n)},a=".nav-item",s=".nav-link",r=".nav-treeview",l=".menu-open",u='[data-widget="treeview"]',d="menu-open",h="sidebar-collapse",f={trigger:"".concat(u," ").concat(s),animationSpeed:300,accordion:!0,expandSidebar:!1,sidebarButtonSelector:'[data-widget="pushmenu"]'},g=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._config=n,this._element=e}var n,i,s;return n=t,s=[{key:"_jQueryInterface",value:function(n){return this.each((function(){var i=e(this).data("lte.treeview"),o=e.extend({},f,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.treeview",i)),"init"===n&&i[n]()}))}}],(i=[{key:"init",value:function(){this._setupListeners()}},{key:"expand",value:function(t,n){var i=this,a=e.Event(o.EXPANDED);if(this._config.accordion){var s=n.siblings(l).first(),c=s.find(r).first();this.collapse(c,s)}t.stop().slideDown(this._config.animationSpeed,(function(){n.addClass(d),e(i._element).trigger(a)})),this._config.expandSidebar&&this._expandSidebar()}},{key:"collapse",value:function(t,n){var i=this,a=e.Event(o.COLLAPSED);t.stop().slideUp(this._config.animationSpeed,(function(){n.removeClass(d),e(i._element).trigger(a),t.find("".concat(l," > ").concat(r)).slideUp(),t.find(l).removeClass(d)}))}},{key:"toggle",value:function(t){var n=e(t.currentTarget),i=n.parent(),o=i.find("> "+r);if(o.is(r)||(i.is(a)||(o=i.parent().find("> "+r)),o.is(r))){t.preventDefault();var s=n.parents(a).first();s.hasClass(d)?this.collapse(e(o),s):this.expand(e(o),s)}}},{key:"_setupListeners",value:function(){var t=this;e(document).on("click",this._config.trigger,(function(e){t.toggle(e)}))}},{key:"_expandSidebar",value:function(){e("body").hasClass(h)&&e(this._config.sidebarButtonSelector).PushMenu("expand")}}])&&c(n.prototype,i),s&&c(n,s),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(window).on(o.LOAD_DATA_API,(function(){e(u).each((function(){g._jQueryInterface.call(e(this),"init")}))})),e.fn[t]=g._jQueryInterface,e.fn[t].Constructor=g,e.fn[t].noConflict=function(){return e.fn[t]=i,g._jQueryInterface},g}(jQuery);function d(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var h=function(e){var t="DirectChat",n=(".".concat("lte.directchat"),e.fn[t]),i="toggled{EVENT_KEY}",o='[data-widget="chat-pane-toggle"]',a=".direct-chat",s="direct-chat-contacts-open",r=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._element=e}var n,o,r;return n=t,r=[{key:"_jQueryInterface",value:function(n){return this.each((function(){var i=e(this).data("lte.directchat");i||(i=new t(e(this)),e(this).data("lte.directchat",i)),i[n]()}))}}],(o=[{key:"toggle",value:function(){e(this._element).parents(a).first().toggleClass(s);var t=e.Event(i);e(this._element).trigger(t)}}])&&d(n.prototype,o),r&&d(n,r),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(document).on("click",o,(function(t){t&&t.preventDefault(),r._jQueryInterface.call(e(this),"toggle")})),e.fn[t]=r._jQueryInterface,e.fn[t].Constructor=r,e.fn[t].noConflict=function(){return e.fn[t]=n,r._jQueryInterface},r}(jQuery);function f(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var g=function(e){var t="TodoList",n=(".".concat("lte.todolist"),e.fn[t]),i='[data-widget="todo-list"]',o="done",a={onCheck:function(e){return e},onUnCheck:function(e){return e}},s=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._config=n,this._element=e,this._init()}var n,s,r;return n=t,r=[{key:"_jQueryInterface",value:function(n){return this.each((function(){var i=e(this).data("lte.todolist"),o=e.extend({},a,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.todolist",i)),"init"===n&&i[n]()}))}}],(s=[{key:"toggle",value:function(t){t.parents("li").toggleClass(o),e(t).prop("checked")?this.check(t):this.unCheck(e(t))}},{key:"check",value:function(e){this._config.onCheck.call(e)}},{key:"unCheck",value:function(e){this._config.onUnCheck.call(e)}},{key:"_init",value:function(){var t=this;e(i).find("input:checkbox:checked").parents("li").toggleClass(o),e(i).on("change","input:checkbox",(function(n){t.toggle(e(n.target))}))}}])&&f(n.prototype,s),r&&f(n,r),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(window).on("load",(function(){s._jQueryInterface.call(e(i))})),e.fn[t]=s._jQueryInterface,e.fn[t].Constructor=s,e.fn[t].noConflict=function(){return e.fn[t]=n,s._jQueryInterface},s}(jQuery);function p(e){return(p="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function y(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var v=function(e){var t="CardWidget",n=".".concat("lte.cardwidget"),i=e.fn[t],o={EXPANDED:"expanded".concat(n),COLLAPSED:"collapsed".concat(n),MAXIMIZED:"maximized".concat(n),MINIMIZED:"minimized".concat(n),REMOVED:"removed".concat(n)},a="card",s="collapsed-card",r="was-collapsed",l="maximized-card",c={DATA_REMOVE:'[data-card-widget="remove"]',DATA_COLLAPSE:'[data-card-widget="collapse"]',DATA_MAXIMIZE:'[data-card-widget="maximize"]',CARD:".".concat(a),CARD_HEADER:".card-header",CARD_BODY:".card-body",CARD_FOOTER:".card-footer",COLLAPSED:".".concat(s)},u={animationSpeed:"normal",collapseTrigger:c.DATA_COLLAPSE,removeTrigger:c.DATA_REMOVE,maximizeTrigger:c.DATA_MAXIMIZE,collapseIcon:"fa-minus",expandIcon:"fa-plus",maximizeIcon:"fa-expand",minimizeIcon:"fa-compress"},d=function(){function t(n,i){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._element=n,this._parent=n.parents(c.CARD).first(),n.hasClass(a)&&(this._parent=n),this._settings=e.extend({},u,i)}var n,i,d;return n=t,d=[{key:"_jQueryInterface",value:function(n){var i=e(this).data("lte.cardwidget"),o=e.extend({},u,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.cardwidget","string"==typeof n?i:n)),"string"==typeof n&&n.match(/collapse|expand|remove|toggle|maximize|minimize|toggleMaximize/)?i[n]():"object"===p(n)&&i._init(e(this))}}],(i=[{key:"collapse",value:function(){var t=this;this._parent.children("".concat(c.CARD_BODY,", ").concat(c.CARD_FOOTER)).slideUp(this._settings.animationSpeed,(function(){t._parent.addClass(s)})),this._parent.find("> "+c.CARD_HEADER+" "+this._settings.collapseTrigger+" ."+this._settings.collapseIcon).addClass(this._settings.expandIcon).removeClass(this._settings.collapseIcon);var n=e.Event(o.COLLAPSED);this._element.trigger(n,this._parent)}},{key:"expand",value:function(){var t=this;this._parent.children("".concat(c.CARD_BODY,", ").concat(c.CARD_FOOTER)).slideDown(this._settings.animationSpeed,(function(){t._parent.removeClass(s)})),this._parent.find("> "+c.CARD_HEADER+" "+this._settings.collapseTrigger+" ."+this._settings.expandIcon).addClass(this._settings.collapseIcon).removeClass(this._settings.expandIcon);var n=e.Event(o.EXPANDED);this._element.trigger(n,this._parent)}},{key:"remove",value:function(){this._parent.slideUp();var t=e.Event(o.REMOVED);this._element.trigger(t,this._parent)}},{key:"toggle",value:function(){this._parent.hasClass(s)?this.expand():this.collapse()}},{key:"maximize",value:function(){this._parent.find(this._settings.maximizeTrigger+" ."+this._settings.maximizeIcon).addClass(this._settings.minimizeIcon).removeClass(this._settings.maximizeIcon),this._parent.css({height:this._parent.height(),width:this._parent.width(),transition:"all .15s"}).delay(150).queue((function(){e(this).addClass(l),e("html").addClass(l),e(this).hasClass(s)&&e(this).addClass(r),e(this).dequeue()}));var t=e.Event(o.MAXIMIZED);this._element.trigger(t,this._parent)}},{key:"minimize",value:function(){this._parent.find(this._settings.maximizeTrigger+" ."+this._settings.minimizeIcon).addClass(this._settings.maximizeIcon).removeClass(this._settings.minimizeIcon),this._parent.css("cssText","height:"+this._parent[0].style.height+" !important;width:"+this._parent[0].style.width+" !important; transition: all .15s;").delay(10).queue((function(){e(this).removeClass(l),e("html").removeClass(l),e(this).css({height:"inherit",width:"inherit"}),e(this).hasClass(r)&&e(this).removeClass(r),e(this).dequeue()}));var t=e.Event(o.MINIMIZED);this._element.trigger(t,this._parent)}},{key:"toggleMaximize",value:function(){this._parent.hasClass(l)?this.minimize():this.maximize()}},{key:"_init",value:function(t){var n=this;this._parent=t,e(this).find(this._settings.collapseTrigger).click((function(){n.toggle()})),e(this).find(this._settings.maximizeTrigger).click((function(){n.toggleMaximize()})),e(this).find(this._settings.removeTrigger).click((function(){n.remove()}))}}])&&y(n.prototype,i),d&&y(n,d),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(document).on("click",c.DATA_COLLAPSE,(function(t){t&&t.preventDefault(),d._jQueryInterface.call(e(this),"toggle")})),e(document).on("click",c.DATA_REMOVE,(function(t){t&&t.preventDefault(),d._jQueryInterface.call(e(this),"remove")})),e(document).on("click",c.DATA_MAXIMIZE,(function(t){t&&t.preventDefault(),d._jQueryInterface.call(e(this),"toggleMaximize")})),e.fn[t]=d._jQueryInterface,e.fn[t].Constructor=d,e.fn[t].noConflict=function(){return e.fn[t]=i,d._jQueryInterface},d}(jQuery);function m(e){return(m="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function _(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var b=function(e){var t="CardRefresh",n=".".concat("lte.cardrefresh"),i=e.fn[t],o={LOADED:"loaded".concat(n),OVERLAY_ADDED:"overlay.added".concat(n),OVERLAY_REMOVED:"overlay.removed".concat(n)},a="card",s={CARD:".".concat(a),DATA_REFRESH:'[data-card-widget="card-refresh"]'},r={source:"",sourceSelector:"",params:{},trigger:s.DATA_REFRESH,content:".card-body",loadInContent:!0,loadOnInit:!0,responseType:"",overlayTemplate:'<div class="overlay"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>',onLoadStart:function(){},onLoadDone:function(e){return e}},l=function(){function t(n,i){if(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._element=n,this._parent=n.parents(s.CARD).first(),this._settings=e.extend({},r,i),this._overlay=e(this._settings.overlayTemplate),n.hasClass(a)&&(this._parent=n),""===this._settings.source)throw new Error("Source url was not defined. Please specify a url in your CardRefresh source option.");this._init(),this._settings.loadOnInit&&this.load()}var n,i,l;return n=t,l=[{key:"_jQueryInterface",value:function(n){var i=e(this).data("lte.cardrefresh"),o=e.extend({},r,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.cardrefresh","string"==typeof n?i:n)),"string"==typeof n&&n.match(/load/)?i[n]():"object"===m(n)&&i._init(e(this))}}],(i=[{key:"load",value:function(){this._addOverlay(),this._settings.onLoadStart.call(e(this)),e.get(this._settings.source,this._settings.params,function(t){this._settings.loadInContent&&(""!=this._settings.sourceSelector&&(t=e(t).find(this._settings.sourceSelector).html()),this._parent.find(this._settings.content).html(t)),this._settings.onLoadDone.call(e(this),t),this._removeOverlay()}.bind(this),""!==this._settings.responseType&&this._settings.responseType);var t=e.Event(o.LOADED);e(this._element).trigger(t)}},{key:"_addOverlay",value:function(){this._parent.append(this._overlay);var t=e.Event(o.OVERLAY_ADDED);e(this._element).trigger(t)}},{key:"_removeOverlay",value:function(){this._parent.find(this._overlay).remove();var t=e.Event(o.OVERLAY_REMOVED);e(this._element).trigger(t)}},{key:"_init",value:function(t){var n=this;e(this).find(this._settings.trigger).on("click",(function(){n.load()}))}}])&&_(n.prototype,i),l&&_(n,l),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(document).on("click",s.DATA_REFRESH,(function(t){t&&t.preventDefault(),l._jQueryInterface.call(e(this),"load")})),e.fn[t]=l._jQueryInterface,e.fn[t].Constructor=l,e.fn[t].noConflict=function(){return e.fn[t]=i,l._jQueryInterface},l}(jQuery);function C(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var w=function(e){var t="Dropdown",n=(".".concat("lte.dropdown"),e.fn[t]),i="ul.dropdown-menu",o='[data-toggle="dropdown"]',a={},s=function(){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._config=n,this._element=e}var n,i,o;return n=t,o=[{key:"_jQueryInterface",value:function(n){return this.each((function(){var i=e(this).data("lte.dropdown"),o=e.extend({},a,e(this).data());i||(i=new t(e(this),o),e(this).data("lte.dropdown",i)),"toggleSubmenu"===n&&i[n]()}))}}],(i=[{key:"toggleSubmenu",value:function(){this._element.siblings().show().toggleClass("show"),this._element.next().hasClass("show")||this._element.parents(".dropdown-menu").first().find(".show").removeClass("show").hide(),this._element.parents("li.nav-item.dropdown.show").on("hidden.bs.dropdown",(function(t){e(".dropdown-submenu .show").removeClass("show").hide()}))}}])&&C(n.prototype,i),o&&C(n,o),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e(i+" "+o).on("click",(function(t){t.preventDefault(),t.stopPropagation(),s._jQueryInterface.call(e(this),"toggleSubmenu")})),e.fn[t]=s._jQueryInterface,e.fn[t].Constructor=s,e.fn[t].noConflict=function(){return e.fn[t]=n,s._jQueryInterface},s}(jQuery);function E(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var x=function(e){var t="Toasts",n=".".concat("lte.toasts"),i=e.fn[t],o={INIT:"init".concat(n),CREATED:"created".concat(n),REMOVED:"removed".concat(n)},a="#toastsContainerTopRight",s="#toastsContainerTopLeft",r="#toastsContainerBottomRight",l="#toastsContainerBottomLeft",c="toasts-top-right",u="toasts-top-left",d="toasts-bottom-right",h="toasts-bottom-left",f="topRight",g="topLeft",p="bottomRight",y="bottomLeft",v={position:f,fixed:!0,autohide:!1,autoremove:!0,delay:1e3,fade:!0,icon:null,image:null,imageAlt:null,imageHeight:"25px",title:null,subtitle:null,close:!0,body:null,class:null},m=function(){function t(n,i){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),this._config=i,this._prepareContainer();var a=e.Event(o.INIT);e("body").trigger(a)}var n,i,m;return n=t,m=[{key:"_jQueryInterface",value:function(n,i){return this.each((function(){var o=e.extend({},v,i),a=new t(e(this),o);"create"===n&&a[n]()}))}}],(i=[{key:"create",value:function(){var t=e('<div class="toast" role="alert" aria-live="assertive" aria-atomic="true"/>');t.data("autohide",this._config.autohide),t.data("animation",this._config.fade),this._config.class&&t.addClass(this._config.class),this._config.delay&&500!=this._config.delay&&t.data("delay",this._config.delay);var n=e('<div class="toast-header">');if(null!=this._config.image){var i=e("<img />").addClass("rounded mr-2").attr("src",this._config.image).attr("alt",this._config.imageAlt);null!=this._config.imageHeight&&i.height(this._config.imageHeight).width("auto"),n.append(i)}if(null!=this._config.icon&&n.append(e("<i />").addClass("mr-2").addClass(this._config.icon)),null!=this._config.title&&n.append(e("<strong />").addClass("mr-auto").html(this._config.title)),null!=this._config.subtitle&&n.append(e("<small />").html(this._config.subtitle)),1==this._config.close){var a=e('<button data-dismiss="toast" />').attr("type","button").addClass("ml-2 mb-1 close").attr("aria-label","Close").append('<span aria-hidden="true">&times;</span>');null==this._config.title&&a.toggleClass("ml-2 ml-auto"),n.append(a)}t.append(n),null!=this._config.body&&t.append(e('<div class="toast-body" />').html(this._config.body)),e(this._getContainerId()).prepend(t);var s=e.Event(o.CREATED);e("body").trigger(s),t.toast("show"),this._config.autoremove&&t.on("hidden.bs.toast",(function(){e(this).delay(200).remove();var t=e.Event(o.REMOVED);e("body").trigger(t)}))}},{key:"_getContainerId",value:function(){return this._config.position==f?a:this._config.position==g?s:this._config.position==p?r:this._config.position==y?l:void 0}},{key:"_prepareContainer",value:function(){if(0===e(this._getContainerId()).length){var t=e("<div />").attr("id",this._getContainerId().replace("#",""));this._config.position==f?t.addClass(c):this._config.position==g?t.addClass(u):this._config.position==p?t.addClass(d):this._config.position==y&&t.addClass(h),e("body").append(t)}this._config.fixed?e(this._getContainerId()).addClass("fixed"):e(this._getContainerId()).removeClass("fixed")}}])&&E(n.prototype,i),m&&E(n,m),Object.defineProperty(n,"prototype",{writable:!1}),t}();return e.fn[t]=m._jQueryInterface,e.fn[t].Constructor=m,e.fn[t].noConflict=function(){return e.fn[t]=i,m._jQueryInterface},m}(jQuery)},9:function(e,t){}},[[5,1,2]]]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/js/admin"],{
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/CardRefresh.js":
+/*!********************************************!*\
+  !*** ./resources/assets/js/CardRefresh.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE CardRefresh.js
+ * License MIT
+ * --------------------------------------------
+ */
+var CardRefresh = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'CardRefresh';
+  var DATA_KEY = 'lte.cardrefresh';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    LOADED: "loaded".concat(EVENT_KEY),
+    OVERLAY_ADDED: "overlay.added".concat(EVENT_KEY),
+    OVERLAY_REMOVED: "overlay.removed".concat(EVENT_KEY)
+  };
+  var ClassName = {
+    CARD: 'card'
+  };
+  var Selector = {
+    CARD: ".".concat(ClassName.CARD),
+    DATA_REFRESH: '[data-card-widget="card-refresh"]'
+  };
+  var Default = {
+    source: '',
+    sourceSelector: '',
+    params: {},
+    trigger: Selector.DATA_REFRESH,
+    content: '.card-body',
+    loadInContent: true,
+    loadOnInit: true,
+    responseType: '',
+    overlayTemplate: '<div class="overlay"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>',
+    onLoadStart: function onLoadStart() {},
+    onLoadDone: function onLoadDone(response) {
+      return response;
+    }
+  };
+
+  var CardRefresh = /*#__PURE__*/function () {
+    function CardRefresh(element, settings) {
+      _classCallCheck(this, CardRefresh);
+
+      this._element = element;
+      this._parent = element.parents(Selector.CARD).first();
+      this._settings = $.extend({}, Default, settings);
+      this._overlay = $(this._settings.overlayTemplate);
+
+      if (element.hasClass(ClassName.CARD)) {
+        this._parent = element;
+      }
+
+      if (this._settings.source === '') {
+        throw new Error('Source url was not defined. Please specify a url in your CardRefresh source option.');
+      }
+
+      this._init();
+
+      if (this._settings.loadOnInit) {
+        this.load();
+      }
+    }
+
+    _createClass(CardRefresh, [{
+      key: "load",
+      value: function load() {
+        this._addOverlay();
+
+        this._settings.onLoadStart.call($(this));
+
+        $.get(this._settings.source, this._settings.params, function (response) {
+          if (this._settings.loadInContent) {
+            if (this._settings.sourceSelector != '') {
+              response = $(response).find(this._settings.sourceSelector).html();
+            }
+
+            this._parent.find(this._settings.content).html(response);
+          }
+
+          this._settings.onLoadDone.call($(this), response);
+
+          this._removeOverlay();
+        }.bind(this), this._settings.responseType !== '' && this._settings.responseType);
+        var loadedEvent = $.Event(Event.LOADED);
+        $(this._element).trigger(loadedEvent);
+      }
+    }, {
+      key: "_addOverlay",
+      value: function _addOverlay() {
+        this._parent.append(this._overlay);
+
+        var overlayAddedEvent = $.Event(Event.OVERLAY_ADDED);
+        $(this._element).trigger(overlayAddedEvent);
+      }
+    }, {
+      key: "_removeOverlay",
+      value: function _removeOverlay() {
+        this._parent.find(this._overlay).remove();
+
+        var overlayRemovedEvent = $.Event(Event.OVERLAY_REMOVED);
+        $(this._element).trigger(overlayRemovedEvent);
+      }
+    }, {
+      key: "_init",
+      // Private
+      value: function _init(card) {
+        var _this = this;
+
+        $(this).find(this._settings.trigger).on('click', function () {
+          _this.load();
+        });
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        var data = $(this).data(DATA_KEY);
+
+        var _options = $.extend({}, Default, $(this).data());
+
+        if (!data) {
+          data = new CardRefresh($(this), _options);
+          $(this).data(DATA_KEY, typeof config === 'string' ? data : config);
+        }
+
+        if (typeof config === 'string' && config.match(/load/)) {
+          data[config]();
+        } else if (_typeof(config) === 'object') {
+          data._init($(this));
+        }
+      }
+    }]);
+
+    return CardRefresh;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(document).on('click', Selector.DATA_REFRESH, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    CardRefresh._jQueryInterface.call($(this), 'load');
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = CardRefresh._jQueryInterface;
+  $.fn[NAME].Constructor = CardRefresh;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return CardRefresh._jQueryInterface;
+  };
+
+  return CardRefresh;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (CardRefresh);
+
+/***/ }),
+
+/***/ "./resources/assets/js/CardWidget.js":
+/*!*******************************************!*\
+  !*** ./resources/assets/js/CardWidget.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE CardWidget.js
+ * License MIT
+ * --------------------------------------------
+ */
+var CardWidget = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'CardWidget';
+  var DATA_KEY = 'lte.cardwidget';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    EXPANDED: "expanded".concat(EVENT_KEY),
+    COLLAPSED: "collapsed".concat(EVENT_KEY),
+    MAXIMIZED: "maximized".concat(EVENT_KEY),
+    MINIMIZED: "minimized".concat(EVENT_KEY),
+    REMOVED: "removed".concat(EVENT_KEY)
+  };
+  var ClassName = {
+    CARD: 'card',
+    COLLAPSED: 'collapsed-card',
+    WAS_COLLAPSED: 'was-collapsed',
+    MAXIMIZED: 'maximized-card'
+  };
+  var Selector = {
+    DATA_REMOVE: '[data-card-widget="remove"]',
+    DATA_COLLAPSE: '[data-card-widget="collapse"]',
+    DATA_MAXIMIZE: '[data-card-widget="maximize"]',
+    CARD: ".".concat(ClassName.CARD),
+    CARD_HEADER: '.card-header',
+    CARD_BODY: '.card-body',
+    CARD_FOOTER: '.card-footer',
+    COLLAPSED: ".".concat(ClassName.COLLAPSED)
+  };
+  var Default = {
+    animationSpeed: 'normal',
+    collapseTrigger: Selector.DATA_COLLAPSE,
+    removeTrigger: Selector.DATA_REMOVE,
+    maximizeTrigger: Selector.DATA_MAXIMIZE,
+    collapseIcon: 'fa-minus',
+    expandIcon: 'fa-plus',
+    maximizeIcon: 'fa-expand',
+    minimizeIcon: 'fa-compress'
+  };
+
+  var CardWidget = /*#__PURE__*/function () {
+    function CardWidget(element, settings) {
+      _classCallCheck(this, CardWidget);
+
+      this._element = element;
+      this._parent = element.parents(Selector.CARD).first();
+
+      if (element.hasClass(ClassName.CARD)) {
+        this._parent = element;
+      }
+
+      this._settings = $.extend({}, Default, settings);
+    }
+
+    _createClass(CardWidget, [{
+      key: "collapse",
+      value: function collapse() {
+        var _this = this;
+
+        this._parent.children("".concat(Selector.CARD_BODY, ", ").concat(Selector.CARD_FOOTER)).slideUp(this._settings.animationSpeed, function () {
+          _this._parent.addClass(ClassName.COLLAPSED);
+        });
+
+        this._parent.find('> ' + Selector.CARD_HEADER + ' ' + this._settings.collapseTrigger + ' .' + this._settings.collapseIcon).addClass(this._settings.expandIcon).removeClass(this._settings.collapseIcon);
+
+        var collapsed = $.Event(Event.COLLAPSED);
+
+        this._element.trigger(collapsed, this._parent);
+      }
+    }, {
+      key: "expand",
+      value: function expand() {
+        var _this2 = this;
+
+        this._parent.children("".concat(Selector.CARD_BODY, ", ").concat(Selector.CARD_FOOTER)).slideDown(this._settings.animationSpeed, function () {
+          _this2._parent.removeClass(ClassName.COLLAPSED);
+        });
+
+        this._parent.find('> ' + Selector.CARD_HEADER + ' ' + this._settings.collapseTrigger + ' .' + this._settings.expandIcon).addClass(this._settings.collapseIcon).removeClass(this._settings.expandIcon);
+
+        var expanded = $.Event(Event.EXPANDED);
+
+        this._element.trigger(expanded, this._parent);
+      }
+    }, {
+      key: "remove",
+      value: function remove() {
+        this._parent.slideUp();
+
+        var removed = $.Event(Event.REMOVED);
+
+        this._element.trigger(removed, this._parent);
+      }
+    }, {
+      key: "toggle",
+      value: function toggle() {
+        if (this._parent.hasClass(ClassName.COLLAPSED)) {
+          this.expand();
+          return;
+        }
+
+        this.collapse();
+      }
+    }, {
+      key: "maximize",
+      value: function maximize() {
+        this._parent.find(this._settings.maximizeTrigger + ' .' + this._settings.maximizeIcon).addClass(this._settings.minimizeIcon).removeClass(this._settings.maximizeIcon);
+
+        this._parent.css({
+          'height': this._parent.height(),
+          'width': this._parent.width(),
+          'transition': 'all .15s'
+        }).delay(150).queue(function () {
+          $(this).addClass(ClassName.MAXIMIZED);
+          $('html').addClass(ClassName.MAXIMIZED);
+
+          if ($(this).hasClass(ClassName.COLLAPSED)) {
+            $(this).addClass(ClassName.WAS_COLLAPSED);
+          }
+
+          $(this).dequeue();
+        });
+
+        var maximized = $.Event(Event.MAXIMIZED);
+
+        this._element.trigger(maximized, this._parent);
+      }
+    }, {
+      key: "minimize",
+      value: function minimize() {
+        this._parent.find(this._settings.maximizeTrigger + ' .' + this._settings.minimizeIcon).addClass(this._settings.maximizeIcon).removeClass(this._settings.minimizeIcon);
+
+        this._parent.css('cssText', 'height:' + this._parent[0].style.height + ' !important;' + 'width:' + this._parent[0].style.width + ' !important; transition: all .15s;').delay(10).queue(function () {
+          $(this).removeClass(ClassName.MAXIMIZED);
+          $('html').removeClass(ClassName.MAXIMIZED);
+          $(this).css({
+            'height': 'inherit',
+            'width': 'inherit'
+          });
+
+          if ($(this).hasClass(ClassName.WAS_COLLAPSED)) {
+            $(this).removeClass(ClassName.WAS_COLLAPSED);
+          }
+
+          $(this).dequeue();
+        });
+
+        var MINIMIZED = $.Event(Event.MINIMIZED);
+
+        this._element.trigger(MINIMIZED, this._parent);
+      }
+    }, {
+      key: "toggleMaximize",
+      value: function toggleMaximize() {
+        if (this._parent.hasClass(ClassName.MAXIMIZED)) {
+          this.minimize();
+          return;
+        }
+
+        this.maximize();
+      } // Private
+
+    }, {
+      key: "_init",
+      value: function _init(card) {
+        var _this3 = this;
+
+        this._parent = card;
+        $(this).find(this._settings.collapseTrigger).click(function () {
+          _this3.toggle();
+        });
+        $(this).find(this._settings.maximizeTrigger).click(function () {
+          _this3.toggleMaximize();
+        });
+        $(this).find(this._settings.removeTrigger).click(function () {
+          _this3.remove();
+        });
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        var data = $(this).data(DATA_KEY);
+
+        var _options = $.extend({}, Default, $(this).data());
+
+        if (!data) {
+          data = new CardWidget($(this), _options);
+          $(this).data(DATA_KEY, typeof config === 'string' ? data : config);
+        }
+
+        if (typeof config === 'string' && config.match(/collapse|expand|remove|toggle|maximize|minimize|toggleMaximize/)) {
+          data[config]();
+        } else if (_typeof(config) === 'object') {
+          data._init($(this));
+        }
+      }
+    }]);
+
+    return CardWidget;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(document).on('click', Selector.DATA_COLLAPSE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    CardWidget._jQueryInterface.call($(this), 'toggle');
+  });
+  $(document).on('click', Selector.DATA_REMOVE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    CardWidget._jQueryInterface.call($(this), 'remove');
+  });
+  $(document).on('click', Selector.DATA_MAXIMIZE, function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    CardWidget._jQueryInterface.call($(this), 'toggleMaximize');
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = CardWidget._jQueryInterface;
+  $.fn[NAME].Constructor = CardWidget;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return CardWidget._jQueryInterface;
+  };
+
+  return CardWidget;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (CardWidget);
+
+/***/ }),
+
+/***/ "./resources/assets/js/ControlSidebar.js":
+/*!***********************************************!*\
+  !*** ./resources/assets/js/ControlSidebar.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE ControlSidebar.js
+ * License MIT
+ * --------------------------------------------
+ */
+var ControlSidebar = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'ControlSidebar';
+  var DATA_KEY = 'lte.controlsidebar';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var DATA_API_KEY = '.data-api';
+  var Event = {
+    COLLAPSED: "collapsed".concat(EVENT_KEY),
+    EXPANDED: "expanded".concat(EVENT_KEY)
+  };
+  var Selector = {
+    CONTROL_SIDEBAR: '.control-sidebar',
+    CONTROL_SIDEBAR_CONTENT: '.control-sidebar-content',
+    DATA_TOGGLE: '[data-widget="control-sidebar"]',
+    CONTENT: '.content-wrapper',
+    HEADER: '.main-header',
+    FOOTER: '.main-footer'
+  };
+  var ClassName = {
+    CONTROL_SIDEBAR_ANIMATE: 'control-sidebar-animate',
+    CONTROL_SIDEBAR_OPEN: 'control-sidebar-open',
+    CONTROL_SIDEBAR_SLIDE: 'control-sidebar-slide-open',
+    LAYOUT_FIXED: 'layout-fixed',
+    NAVBAR_FIXED: 'layout-navbar-fixed',
+    NAVBAR_SM_FIXED: 'layout-sm-navbar-fixed',
+    NAVBAR_MD_FIXED: 'layout-md-navbar-fixed',
+    NAVBAR_LG_FIXED: 'layout-lg-navbar-fixed',
+    NAVBAR_XL_FIXED: 'layout-xl-navbar-fixed',
+    FOOTER_FIXED: 'layout-footer-fixed',
+    FOOTER_SM_FIXED: 'layout-sm-footer-fixed',
+    FOOTER_MD_FIXED: 'layout-md-footer-fixed',
+    FOOTER_LG_FIXED: 'layout-lg-footer-fixed',
+    FOOTER_XL_FIXED: 'layout-xl-footer-fixed'
+  };
+  var Default = {
+    controlsidebarSlide: true,
+    scrollbarTheme: 'os-theme-light',
+    scrollbarAutoHide: 'l'
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var ControlSidebar = /*#__PURE__*/function () {
+    function ControlSidebar(element, config) {
+      _classCallCheck(this, ControlSidebar);
+
+      this._element = element;
+      this._config = config;
+
+      this._init();
+    } // Public
+
+
+    _createClass(ControlSidebar, [{
+      key: "collapse",
+      value: function collapse() {
+        // Show the control sidebar
+        if (this._config.controlsidebarSlide) {
+          $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+          $('body').removeClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
+            $(Selector.CONTROL_SIDEBAR).hide();
+            $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+            $(this).dequeue();
+          });
+        } else {
+          $('body').removeClass(ClassName.CONTROL_SIDEBAR_OPEN);
+        }
+
+        var collapsedEvent = $.Event(Event.COLLAPSED);
+        $(this._element).trigger(collapsedEvent);
+      }
+    }, {
+      key: "show",
+      value: function show() {
+        // Collapse the control sidebar
+        if (this._config.controlsidebarSlide) {
+          $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+          $(Selector.CONTROL_SIDEBAR).show().delay(10).queue(function () {
+            $('body').addClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
+              $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+              $(this).dequeue();
+            });
+            $(this).dequeue();
+          });
+        } else {
+          $('body').addClass(ClassName.CONTROL_SIDEBAR_OPEN);
+        }
+
+        var expandedEvent = $.Event(Event.EXPANDED);
+        $(this._element).trigger(expandedEvent);
+      }
+    }, {
+      key: "toggle",
+      value: function toggle() {
+        var shouldClose = $('body').hasClass(ClassName.CONTROL_SIDEBAR_OPEN) || $('body').hasClass(ClassName.CONTROL_SIDEBAR_SLIDE);
+
+        if (shouldClose) {
+          // Close the control sidebar
+          this.collapse();
+        } else {
+          // Open the control sidebar
+          this.show();
+        }
+      } // Private
+
+    }, {
+      key: "_init",
+      value: function _init() {
+        var _this = this;
+
+        this._fixHeight();
+
+        this._fixScrollHeight();
+
+        $(window).resize(function () {
+          _this._fixHeight();
+
+          _this._fixScrollHeight();
+        });
+        $(window).scroll(function () {
+          if ($('body').hasClass(ClassName.CONTROL_SIDEBAR_OPEN) || $('body').hasClass(ClassName.CONTROL_SIDEBAR_SLIDE)) {
+            _this._fixScrollHeight();
+          }
+        });
+      }
+    }, {
+      key: "_fixScrollHeight",
+      value: function _fixScrollHeight() {
+        var heights = {
+          scroll: $(document).height(),
+          window: $(window).height(),
+          header: $(Selector.HEADER).outerHeight(),
+          footer: $(Selector.FOOTER).outerHeight()
+        };
+        var positions = {
+          bottom: Math.abs(heights.window + $(window).scrollTop() - heights.scroll),
+          top: $(window).scrollTop()
+        };
+        var navbarFixed = false;
+        var footerFixed = false;
+
+        if ($('body').hasClass(ClassName.LAYOUT_FIXED)) {
+          if ($('body').hasClass(ClassName.NAVBAR_FIXED) || $('body').hasClass(ClassName.NAVBAR_SM_FIXED) || $('body').hasClass(ClassName.NAVBAR_MD_FIXED) || $('body').hasClass(ClassName.NAVBAR_LG_FIXED) || $('body').hasClass(ClassName.NAVBAR_XL_FIXED)) {
+            if ($(Selector.HEADER).css("position") === "fixed") {
+              navbarFixed = true;
+            }
+          }
+
+          if ($('body').hasClass(ClassName.FOOTER_FIXED) || $('body').hasClass(ClassName.FOOTER_SM_FIXED) || $('body').hasClass(ClassName.FOOTER_MD_FIXED) || $('body').hasClass(ClassName.FOOTER_LG_FIXED) || $('body').hasClass(ClassName.FOOTER_XL_FIXED)) {
+            if ($(Selector.FOOTER).css("position") === "fixed") {
+              footerFixed = true;
+            }
+          }
+
+          if (positions.top === 0 && positions.bottom === 0) {
+            $(Selector.CONTROL_SIDEBAR).css('bottom', heights.footer);
+            $(Selector.CONTROL_SIDEBAR).css('top', heights.header);
+            $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window - (heights.header + heights.footer));
+          } else if (positions.bottom <= heights.footer) {
+            if (footerFixed === false) {
+              $(Selector.CONTROL_SIDEBAR).css('bottom', heights.footer - positions.bottom);
+              $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window - (heights.footer - positions.bottom));
+            } else {
+              $(Selector.CONTROL_SIDEBAR).css('bottom', heights.footer);
+            }
+          } else if (positions.top <= heights.header) {
+            if (navbarFixed === false) {
+              $(Selector.CONTROL_SIDEBAR).css('top', heights.header - positions.top);
+              $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window - (heights.header - positions.top));
+            } else {
+              $(Selector.CONTROL_SIDEBAR).css('top', heights.header);
+            }
+          } else {
+            if (navbarFixed === false) {
+              $(Selector.CONTROL_SIDEBAR).css('top', 0);
+              $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window);
+            } else {
+              $(Selector.CONTROL_SIDEBAR).css('top', heights.header);
+            }
+          }
+        }
+      }
+    }, {
+      key: "_fixHeight",
+      value: function _fixHeight() {
+        var heights = {
+          window: $(window).height(),
+          header: $(Selector.HEADER).outerHeight(),
+          footer: $(Selector.FOOTER).outerHeight()
+        };
+
+        if ($('body').hasClass(ClassName.LAYOUT_FIXED)) {
+          var sidebarHeight = heights.window - heights.header;
+
+          if ($('body').hasClass(ClassName.FOOTER_FIXED) || $('body').hasClass(ClassName.FOOTER_SM_FIXED) || $('body').hasClass(ClassName.FOOTER_MD_FIXED) || $('body').hasClass(ClassName.FOOTER_LG_FIXED) || $('body').hasClass(ClassName.FOOTER_XL_FIXED)) {
+            if ($(Selector.FOOTER).css("position") === "fixed") {
+              sidebarHeight = heights.window - heights.header - heights.footer;
+            }
+          }
+
+          $(Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', sidebarHeight);
+
+          if (typeof $.fn.overlayScrollbars !== 'undefined') {
+            $(Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).overlayScrollbars({
+              className: this._config.scrollbarTheme,
+              sizeAutoCapable: true,
+              scrollbars: {
+                autoHide: this._config.scrollbarAutoHide,
+                clickScrolling: true
+              }
+            });
+          }
+        }
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(operation) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _options = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new ControlSidebar(this, _options);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (data[operation] === 'undefined') {
+            throw new Error("".concat(operation, " is not a function"));
+          }
+
+          data[operation]();
+        });
+      }
+    }]);
+
+    return ControlSidebar;
+  }();
+  /**
+   *
+   * Data Api implementation
+   * ====================================================
+   */
+
+
+  $(document).on('click', Selector.DATA_TOGGLE, function (event) {
+    event.preventDefault();
+
+    ControlSidebar._jQueryInterface.call($(this), 'toggle');
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = ControlSidebar._jQueryInterface;
+  $.fn[NAME].Constructor = ControlSidebar;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return ControlSidebar._jQueryInterface;
+  };
+
+  return ControlSidebar;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (ControlSidebar);
+
+/***/ }),
+
+/***/ "./resources/assets/js/DirectChat.js":
+/*!*******************************************!*\
+  !*** ./resources/assets/js/DirectChat.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE DirectChat.js
+ * License MIT
+ * --------------------------------------------
+ */
+var DirectChat = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'DirectChat';
+  var DATA_KEY = 'lte.directchat';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var DATA_API_KEY = '.data-api';
+  var Event = {
+    TOGGLED: "toggled{EVENT_KEY}"
+  };
+  var Selector = {
+    DATA_TOGGLE: '[data-widget="chat-pane-toggle"]',
+    DIRECT_CHAT: '.direct-chat'
+  };
+  var ClassName = {
+    DIRECT_CHAT_OPEN: 'direct-chat-contacts-open'
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var DirectChat = /*#__PURE__*/function () {
+    function DirectChat(element, config) {
+      _classCallCheck(this, DirectChat);
+
+      this._element = element;
+    }
+
+    _createClass(DirectChat, [{
+      key: "toggle",
+      value: function toggle() {
+        $(this._element).parents(Selector.DIRECT_CHAT).first().toggleClass(ClassName.DIRECT_CHAT_OPEN);
+        var toggledEvent = $.Event(Event.TOGGLED);
+        $(this._element).trigger(toggledEvent);
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          if (!data) {
+            data = new DirectChat($(this));
+            $(this).data(DATA_KEY, data);
+          }
+
+          data[config]();
+        });
+      }
+    }]);
+
+    return DirectChat;
+  }();
+  /**
+   *
+   * Data Api implementation
+   * ====================================================
+   */
+
+
+  $(document).on('click', Selector.DATA_TOGGLE, function (event) {
+    if (event) event.preventDefault();
+
+    DirectChat._jQueryInterface.call($(this), 'toggle');
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = DirectChat._jQueryInterface;
+  $.fn[NAME].Constructor = DirectChat;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return DirectChat._jQueryInterface;
+  };
+
+  return DirectChat;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (DirectChat);
+
+/***/ }),
+
+/***/ "./resources/assets/js/Dropdown.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/Dropdown.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE Dropdown.js
+ * License MIT
+ * --------------------------------------------
+ */
+var Dropdown = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'Dropdown';
+  var DATA_KEY = 'lte.dropdown';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Selector = {
+    DROPDOWN_MENU: 'ul.dropdown-menu',
+    DROPDOWN_TOGGLE: '[data-toggle="dropdown"]'
+  };
+  var ClassName = {
+    DROPDOWN_HOVER: '.dropdown-hover'
+  };
+  var Default = {};
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var Dropdown = /*#__PURE__*/function () {
+    function Dropdown(element, config) {
+      _classCallCheck(this, Dropdown);
+
+      this._config = config;
+      this._element = element;
+    } // Public
+
+
+    _createClass(Dropdown, [{
+      key: "toggleSubmenu",
+      value: function toggleSubmenu() {
+        this._element.siblings().show().toggleClass("show");
+
+        if (!this._element.next().hasClass('show')) {
+          this._element.parents('.dropdown-menu').first().find('.show').removeClass("show").hide();
+        }
+
+        this._element.parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+          $('.dropdown-submenu .show').removeClass("show").hide();
+        });
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _config = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new Dropdown($(this), _config);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (config === 'toggleSubmenu') {
+            data[config]();
+          }
+        });
+      }
+    }]);
+
+    return Dropdown;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    Dropdown._jQueryInterface.call($(this), 'toggleSubmenu');
+  }); // $(Selector.SIDEBAR + ' a').on('focusin', () => {
+  //   $(Selector.MAIN_SIDEBAR).addClass(ClassName.SIDEBAR_FOCUSED);
+  // })
+  // $(Selector.SIDEBAR + ' a').on('focusout', () => {
+  //   $(Selector.MAIN_SIDEBAR).removeClass(ClassName.SIDEBAR_FOCUSED);
+  // })
+
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = Dropdown._jQueryInterface;
+  $.fn[NAME].Constructor = Dropdown;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Dropdown._jQueryInterface;
+  };
+
+  return Dropdown;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (Dropdown);
+
+/***/ }),
+
+/***/ "./resources/assets/js/Layout.js":
+/*!***************************************!*\
+  !*** ./resources/assets/js/Layout.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE Layout.js
+ * License MIT
+ * --------------------------------------------
+ */
+var Layout = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'Layout';
+  var DATA_KEY = 'lte.layout';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    SIDEBAR: 'sidebar'
+  };
+  var Selector = {
+    HEADER: '.main-header',
+    MAIN_SIDEBAR: '.main-sidebar',
+    SIDEBAR: '.main-sidebar .sidebar',
+    CONTENT: '.content-wrapper',
+    BRAND: '.brand-link',
+    CONTENT_HEADER: '.content-header',
+    WRAPPER: '.wrapper',
+    CONTROL_SIDEBAR: '.control-sidebar',
+    CONTROL_SIDEBAR_CONTENT: '.control-sidebar-content',
+    CONTROL_SIDEBAR_BTN: '[data-widget="control-sidebar"]',
+    LAYOUT_FIXED: '.layout-fixed',
+    FOOTER: '.main-footer',
+    PUSHMENU_BTN: '[data-widget="pushmenu"]',
+    LOGIN_BOX: '.login-box',
+    REGISTER_BOX: '.register-box'
+  };
+  var ClassName = {
+    HOLD: 'hold-transition',
+    SIDEBAR: 'main-sidebar',
+    CONTENT_FIXED: 'content-fixed',
+    SIDEBAR_FOCUSED: 'sidebar-focused',
+    LAYOUT_FIXED: 'layout-fixed',
+    NAVBAR_FIXED: 'layout-navbar-fixed',
+    FOOTER_FIXED: 'layout-footer-fixed',
+    LOGIN_PAGE: 'login-page',
+    REGISTER_PAGE: 'register-page',
+    CONTROL_SIDEBAR_SLIDE_OPEN: 'control-sidebar-slide-open',
+    CONTROL_SIDEBAR_OPEN: 'control-sidebar-open'
+  };
+  var Default = {
+    scrollbarTheme: 'os-theme-light',
+    scrollbarAutoHide: 'l'
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var Layout = /*#__PURE__*/function () {
+    function Layout(element, config) {
+      _classCallCheck(this, Layout);
+
+      this._config = config;
+      this._element = element;
+
+      this._init();
+    } // Public
+
+
+    _createClass(Layout, [{
+      key: "fixLayoutHeight",
+      value: function fixLayoutHeight() {
+        var extra = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+        var control_sidebar = 0;
+
+        if ($('body').hasClass(ClassName.CONTROL_SIDEBAR_SLIDE_OPEN) || $('body').hasClass(ClassName.CONTROL_SIDEBAR_OPEN) || extra == 'control_sidebar') {
+          control_sidebar = $(Selector.CONTROL_SIDEBAR_CONTENT).height();
+        }
+
+        var heights = {
+          window: $(window).height(),
+          header: $(Selector.HEADER).length !== 0 ? $(Selector.HEADER).outerHeight() : 0,
+          footer: $(Selector.FOOTER).length !== 0 ? $(Selector.FOOTER).outerHeight() : 0,
+          sidebar: $(Selector.SIDEBAR).length !== 0 ? $(Selector.SIDEBAR).height() : 0,
+          control_sidebar: control_sidebar
+        };
+
+        var max = this._max(heights);
+
+        if (max == heights.control_sidebar) {
+          $(Selector.CONTENT).css('min-height', max);
+        } else if (max == heights.window) {
+          $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
+        } else {
+          $(Selector.CONTENT).css('min-height', max - heights.header);
+        }
+
+        if ($('body').hasClass(ClassName.LAYOUT_FIXED)) {
+          $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
+
+          if (typeof $.fn.overlayScrollbars !== 'undefined') {
+            $(Selector.SIDEBAR).overlayScrollbars({
+              className: this._config.scrollbarTheme,
+              sizeAutoCapable: true,
+              scrollbars: {
+                autoHide: this._config.scrollbarAutoHide,
+                clickScrolling: true
+              }
+            });
+          }
+        }
+      } // Private
+
+    }, {
+      key: "_init",
+      value: function _init() {
+        var _this = this;
+
+        // Activate layout height watcher
+        this.fixLayoutHeight();
+        $(Selector.SIDEBAR).on('collapsed.lte.treeview expanded.lte.treeview', function () {
+          _this.fixLayoutHeight();
+        });
+        $(Selector.PUSHMENU_BTN).on('collapsed.lte.pushmenu shown.lte.pushmenu', function () {
+          _this.fixLayoutHeight();
+        });
+        $(Selector.CONTROL_SIDEBAR_BTN).on('collapsed.lte.controlsidebar', function () {
+          _this.fixLayoutHeight();
+        }).on('expanded.lte.controlsidebar', function () {
+          _this.fixLayoutHeight('control_sidebar');
+        });
+        $(window).resize(function () {
+          _this.fixLayoutHeight();
+        });
+
+        if (!$('body').hasClass(ClassName.LOGIN_PAGE) && !$('body').hasClass(ClassName.REGISTER_PAGE)) {
+          $('body, html').css('height', 'auto');
+        } else if ($('body').hasClass(ClassName.LOGIN_PAGE) || $('body').hasClass(ClassName.REGISTER_PAGE)) {
+          var box_height = $(Selector.LOGIN_BOX + ', ' + Selector.REGISTER_BOX).height();
+          $('body').css('min-height', box_height);
+        }
+
+        $('body.hold-transition').removeClass('hold-transition');
+      }
+    }, {
+      key: "_max",
+      value: function _max(numbers) {
+        // Calculate the maximum number in a list
+        var max = 0;
+        Object.keys(numbers).forEach(function (key) {
+          if (numbers[key] > max) {
+            max = numbers[key];
+          }
+        });
+        return max;
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface() {
+        var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _options = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new Layout($(this), _options);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (config === 'init' || config === '') {
+            data['_init']();
+          }
+        });
+      }
+    }]);
+
+    return Layout;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(window).on('load', function () {
+    Layout._jQueryInterface.call($('body'));
+  });
+  $(Selector.SIDEBAR + ' a').on('focusin', function () {
+    $(Selector.MAIN_SIDEBAR).addClass(ClassName.SIDEBAR_FOCUSED);
+  });
+  $(Selector.SIDEBAR + ' a').on('focusout', function () {
+    $(Selector.MAIN_SIDEBAR).removeClass(ClassName.SIDEBAR_FOCUSED);
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = Layout._jQueryInterface;
+  $.fn[NAME].Constructor = Layout;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Layout._jQueryInterface;
+  };
+
+  return Layout;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./resources/assets/js/PushMenu.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/PushMenu.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE PushMenu.js
+ * License MIT
+ * --------------------------------------------
+ */
+var PushMenu = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'PushMenu';
+  var DATA_KEY = 'lte.pushmenu';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    COLLAPSED: "collapsed".concat(EVENT_KEY),
+    SHOWN: "shown".concat(EVENT_KEY)
+  };
+  var Default = {
+    autoCollapseSize: 992,
+    enableRemember: false,
+    noTransitionAfterReload: true
+  };
+  var Selector = {
+    TOGGLE_BUTTON: '[data-widget="pushmenu"]',
+    SIDEBAR_MINI: '.sidebar-mini',
+    SIDEBAR_COLLAPSED: '.sidebar-collapse',
+    BODY: 'body',
+    OVERLAY: '#sidebar-overlay',
+    WRAPPER: '.wrapper'
+  };
+  var ClassName = {
+    SIDEBAR_OPEN: 'sidebar-open',
+    COLLAPSED: 'sidebar-collapse',
+    OPEN: 'sidebar-open'
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var PushMenu = /*#__PURE__*/function () {
+    function PushMenu(element, options) {
+      _classCallCheck(this, PushMenu);
+
+      this._element = element;
+      this._options = $.extend({}, Default, options);
+
+      if (!$(Selector.OVERLAY).length) {
+        this._addOverlay();
+      }
+
+      this._init();
+    } // Public
+
+
+    _createClass(PushMenu, [{
+      key: "expand",
+      value: function expand() {
+        if (this._options.autoCollapseSize) {
+          if ($(window).width() <= this._options.autoCollapseSize) {
+            $(Selector.BODY).addClass(ClassName.OPEN);
+          }
+        }
+
+        $(Selector.BODY).removeClass(ClassName.COLLAPSED);
+
+        if (this._options.enableRemember) {
+          localStorage.setItem("remember".concat(EVENT_KEY), ClassName.OPEN);
+        }
+
+        var shownEvent = $.Event(Event.SHOWN);
+        $(this._element).trigger(shownEvent);
+      }
+    }, {
+      key: "collapse",
+      value: function collapse() {
+        if (this._options.autoCollapseSize) {
+          if ($(window).width() <= this._options.autoCollapseSize) {
+            $(Selector.BODY).removeClass(ClassName.OPEN);
+          }
+        }
+
+        $(Selector.BODY).addClass(ClassName.COLLAPSED);
+
+        if (this._options.enableRemember) {
+          localStorage.setItem("remember".concat(EVENT_KEY), ClassName.COLLAPSED);
+        }
+
+        var collapsedEvent = $.Event(Event.COLLAPSED);
+        $(this._element).trigger(collapsedEvent);
+      }
+    }, {
+      key: "toggle",
+      value: function toggle() {
+        if (!$(Selector.BODY).hasClass(ClassName.COLLAPSED)) {
+          this.collapse();
+        } else {
+          this.expand();
+        }
+      }
+    }, {
+      key: "autoCollapse",
+      value: function autoCollapse() {
+        var resize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+        if (this._options.autoCollapseSize) {
+          if ($(window).width() <= this._options.autoCollapseSize) {
+            if (!$(Selector.BODY).hasClass(ClassName.OPEN)) {
+              this.collapse();
+            }
+          } else if (resize == true) {
+            if ($(Selector.BODY).hasClass(ClassName.OPEN)) {
+              $(Selector.BODY).removeClass(ClassName.OPEN);
+            }
+          }
+        }
+      }
+    }, {
+      key: "remember",
+      value: function remember() {
+        if (this._options.enableRemember) {
+          var toggleState = localStorage.getItem("remember".concat(EVENT_KEY));
+
+          if (toggleState == ClassName.COLLAPSED) {
+            if (this._options.noTransitionAfterReload) {
+              $("body").addClass('hold-transition').addClass(ClassName.COLLAPSED).delay(50).queue(function () {
+                $(this).removeClass('hold-transition');
+                $(this).dequeue();
+              });
+            } else {
+              $("body").addClass(ClassName.COLLAPSED);
+            }
+          } else {
+            if (this._options.noTransitionAfterReload) {
+              $("body").addClass('hold-transition').removeClass(ClassName.COLLAPSED).delay(50).queue(function () {
+                $(this).removeClass('hold-transition');
+                $(this).dequeue();
+              });
+            } else {
+              $("body").removeClass(ClassName.COLLAPSED);
+            }
+          }
+        }
+      } // Private
+
+    }, {
+      key: "_init",
+      value: function _init() {
+        var _this = this;
+
+        this.remember();
+        this.autoCollapse();
+        $(window).resize(function () {
+          _this.autoCollapse(true);
+        });
+      }
+    }, {
+      key: "_addOverlay",
+      value: function _addOverlay() {
+        var _this2 = this;
+
+        var overlay = $('<div />', {
+          id: 'sidebar-overlay'
+        });
+        overlay.on('click', function () {
+          _this2.collapse();
+        });
+        $(Selector.WRAPPER).append(overlay);
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(operation) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _options = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new PushMenu(this, _options);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (typeof operation === 'string' && operation.match(/collapse|expand|toggle/)) {
+            data[operation]();
+          }
+        });
+      }
+    }]);
+
+    return PushMenu;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(document).on('click', Selector.TOGGLE_BUTTON, function (event) {
+    event.preventDefault();
+    var button = event.currentTarget;
+
+    if ($(button).data('widget') !== 'pushmenu') {
+      button = $(button).closest(Selector.TOGGLE_BUTTON);
+    }
+
+    PushMenu._jQueryInterface.call($(button), 'toggle');
+  });
+  $(window).on('load', function () {
+    PushMenu._jQueryInterface.call($(Selector.TOGGLE_BUTTON));
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = PushMenu._jQueryInterface;
+  $.fn[NAME].Constructor = PushMenu;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return PushMenu._jQueryInterface;
+  };
+
+  return PushMenu;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (PushMenu);
+
+/***/ }),
+
+/***/ "./resources/assets/js/Toasts.js":
+/*!***************************************!*\
+  !*** ./resources/assets/js/Toasts.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE Toasts.js
+ * License MIT
+ * --------------------------------------------
+ */
+var Toasts = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'Toasts';
+  var DATA_KEY = 'lte.toasts';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    INIT: "init".concat(EVENT_KEY),
+    CREATED: "created".concat(EVENT_KEY),
+    REMOVED: "removed".concat(EVENT_KEY)
+  };
+  var Selector = {
+    BODY: 'toast-body',
+    CONTAINER_TOP_RIGHT: '#toastsContainerTopRight',
+    CONTAINER_TOP_LEFT: '#toastsContainerTopLeft',
+    CONTAINER_BOTTOM_RIGHT: '#toastsContainerBottomRight',
+    CONTAINER_BOTTOM_LEFT: '#toastsContainerBottomLeft'
+  };
+  var ClassName = {
+    TOP_RIGHT: 'toasts-top-right',
+    TOP_LEFT: 'toasts-top-left',
+    BOTTOM_RIGHT: 'toasts-bottom-right',
+    BOTTOM_LEFT: 'toasts-bottom-left',
+    FADE: 'fade'
+  };
+  var Position = {
+    TOP_RIGHT: 'topRight',
+    TOP_LEFT: 'topLeft',
+    BOTTOM_RIGHT: 'bottomRight',
+    BOTTOM_LEFT: 'bottomLeft'
+  };
+  var Id = {
+    CONTAINER_TOP_RIGHT: 'toastsContainerTopRight',
+    CONTAINER_TOP_LEFT: 'toastsContainerTopLeft',
+    CONTAINER_BOTTOM_RIGHT: 'toastsContainerBottomRight',
+    CONTAINER_BOTTOM_LEFT: 'toastsContainerBottomLeft'
+  };
+  var Default = {
+    position: Position.TOP_RIGHT,
+    fixed: true,
+    autohide: false,
+    autoremove: true,
+    delay: 1000,
+    fade: true,
+    icon: null,
+    image: null,
+    imageAlt: null,
+    imageHeight: '25px',
+    title: null,
+    subtitle: null,
+    close: true,
+    body: null,
+    "class": null
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var Toasts = /*#__PURE__*/function () {
+    function Toasts(element, config) {
+      _classCallCheck(this, Toasts);
+
+      this._config = config;
+
+      this._prepareContainer();
+
+      var initEvent = $.Event(Event.INIT);
+      $('body').trigger(initEvent);
+    } // Public
+
+
+    _createClass(Toasts, [{
+      key: "create",
+      value: function create() {
+        var toast = $('<div class="toast" role="alert" aria-live="assertive" aria-atomic="true"/>');
+        toast.data('autohide', this._config.autohide);
+        toast.data('animation', this._config.fade);
+
+        if (this._config["class"]) {
+          toast.addClass(this._config["class"]);
+        }
+
+        if (this._config.delay && this._config.delay != 500) {
+          toast.data('delay', this._config.delay);
+        }
+
+        var toast_header = $('<div class="toast-header">');
+
+        if (this._config.image != null) {
+          var toast_image = $('<img />').addClass('rounded mr-2').attr('src', this._config.image).attr('alt', this._config.imageAlt);
+
+          if (this._config.imageHeight != null) {
+            toast_image.height(this._config.imageHeight).width('auto');
+          }
+
+          toast_header.append(toast_image);
+        }
+
+        if (this._config.icon != null) {
+          toast_header.append($('<i />').addClass('mr-2').addClass(this._config.icon));
+        }
+
+        if (this._config.title != null) {
+          toast_header.append($('<strong />').addClass('mr-auto').html(this._config.title));
+        }
+
+        if (this._config.subtitle != null) {
+          toast_header.append($('<small />').html(this._config.subtitle));
+        }
+
+        if (this._config.close == true) {
+          var toast_close = $('<button data-dismiss="toast" />').attr('type', 'button').addClass('ml-2 mb-1 close').attr('aria-label', 'Close').append('<span aria-hidden="true">&times;</span>');
+
+          if (this._config.title == null) {
+            toast_close.toggleClass('ml-2 ml-auto');
+          }
+
+          toast_header.append(toast_close);
+        }
+
+        toast.append(toast_header);
+
+        if (this._config.body != null) {
+          toast.append($('<div class="toast-body" />').html(this._config.body));
+        }
+
+        $(this._getContainerId()).prepend(toast);
+        var createdEvent = $.Event(Event.CREATED);
+        $('body').trigger(createdEvent);
+        toast.toast('show');
+
+        if (this._config.autoremove) {
+          toast.on('hidden.bs.toast', function () {
+            $(this).delay(200).remove();
+            var removedEvent = $.Event(Event.REMOVED);
+            $('body').trigger(removedEvent);
+          });
+        }
+      } // Static
+
+    }, {
+      key: "_getContainerId",
+      value: function _getContainerId() {
+        if (this._config.position == Position.TOP_RIGHT) {
+          return Selector.CONTAINER_TOP_RIGHT;
+        } else if (this._config.position == Position.TOP_LEFT) {
+          return Selector.CONTAINER_TOP_LEFT;
+        } else if (this._config.position == Position.BOTTOM_RIGHT) {
+          return Selector.CONTAINER_BOTTOM_RIGHT;
+        } else if (this._config.position == Position.BOTTOM_LEFT) {
+          return Selector.CONTAINER_BOTTOM_LEFT;
+        }
+      }
+    }, {
+      key: "_prepareContainer",
+      value: function _prepareContainer() {
+        if ($(this._getContainerId()).length === 0) {
+          var container = $('<div />').attr('id', this._getContainerId().replace('#', ''));
+
+          if (this._config.position == Position.TOP_RIGHT) {
+            container.addClass(ClassName.TOP_RIGHT);
+          } else if (this._config.position == Position.TOP_LEFT) {
+            container.addClass(ClassName.TOP_LEFT);
+          } else if (this._config.position == Position.BOTTOM_RIGHT) {
+            container.addClass(ClassName.BOTTOM_RIGHT);
+          } else if (this._config.position == Position.BOTTOM_LEFT) {
+            container.addClass(ClassName.BOTTOM_LEFT);
+          }
+
+          $('body').append(container);
+        }
+
+        if (this._config.fixed) {
+          $(this._getContainerId()).addClass('fixed');
+        } else {
+          $(this._getContainerId()).removeClass('fixed');
+        }
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(option, config) {
+        return this.each(function () {
+          var _options = $.extend({}, Default, config);
+
+          var toast = new Toasts($(this), _options);
+
+          if (option === 'create') {
+            toast[option]();
+          }
+        });
+      }
+    }]);
+
+    return Toasts;
+  }();
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+
+  $.fn[NAME] = Toasts._jQueryInterface;
+  $.fn[NAME].Constructor = Toasts;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Toasts._jQueryInterface;
+  };
+
+  return Toasts;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (Toasts);
+
+/***/ }),
+
+/***/ "./resources/assets/js/TodoList.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/TodoList.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE TodoList.js
+ * License MIT
+ * --------------------------------------------
+ */
+var TodoList = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'TodoList';
+  var DATA_KEY = 'lte.todolist';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Selector = {
+    DATA_TOGGLE: '[data-widget="todo-list"]'
+  };
+  var ClassName = {
+    TODO_LIST_DONE: 'done'
+  };
+  var Default = {
+    onCheck: function onCheck(item) {
+      return item;
+    },
+    onUnCheck: function onUnCheck(item) {
+      return item;
+    }
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var TodoList = /*#__PURE__*/function () {
+    function TodoList(element, config) {
+      _classCallCheck(this, TodoList);
+
+      this._config = config;
+      this._element = element;
+
+      this._init();
+    } // Public
+
+
+    _createClass(TodoList, [{
+      key: "toggle",
+      value: function toggle(item) {
+        item.parents('li').toggleClass(ClassName.TODO_LIST_DONE);
+
+        if (!$(item).prop('checked')) {
+          this.unCheck($(item));
+          return;
+        }
+
+        this.check(item);
+      }
+    }, {
+      key: "check",
+      value: function check(item) {
+        this._config.onCheck.call(item);
+      }
+    }, {
+      key: "unCheck",
+      value: function unCheck(item) {
+        this._config.onUnCheck.call(item);
+      } // Private
+
+    }, {
+      key: "_init",
+      value: function _init() {
+        var that = this;
+        $(Selector.DATA_TOGGLE).find('input:checkbox:checked').parents('li').toggleClass(ClassName.TODO_LIST_DONE);
+        $(Selector.DATA_TOGGLE).on('change', 'input:checkbox', function (event) {
+          that.toggle($(event.target));
+        });
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _options = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new TodoList($(this), _options);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (config === 'init') {
+            data[config]();
+          }
+        });
+      }
+    }]);
+
+    return TodoList;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(window).on('load', function () {
+    TodoList._jQueryInterface.call($(Selector.DATA_TOGGLE));
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = TodoList._jQueryInterface;
+  $.fn[NAME].Constructor = TodoList;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return TodoList._jQueryInterface;
+  };
+
+  return TodoList;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (TodoList);
+
+/***/ }),
+
+/***/ "./resources/assets/js/Treeview.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/Treeview.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * --------------------------------------------
+ * AdminLTE Treeview.js
+ * License MIT
+ * --------------------------------------------
+ */
+var Treeview = function ($) {
+  /**
+   * Constants
+   * ====================================================
+   */
+  var NAME = 'Treeview';
+  var DATA_KEY = 'lte.treeview';
+  var EVENT_KEY = ".".concat(DATA_KEY);
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var Event = {
+    SELECTED: "selected".concat(EVENT_KEY),
+    EXPANDED: "expanded".concat(EVENT_KEY),
+    COLLAPSED: "collapsed".concat(EVENT_KEY),
+    LOAD_DATA_API: "load".concat(EVENT_KEY)
+  };
+  var Selector = {
+    LI: '.nav-item',
+    LINK: '.nav-link',
+    TREEVIEW_MENU: '.nav-treeview',
+    OPEN: '.menu-open',
+    DATA_WIDGET: '[data-widget="treeview"]'
+  };
+  var ClassName = {
+    LI: 'nav-item',
+    LINK: 'nav-link',
+    TREEVIEW_MENU: 'nav-treeview',
+    OPEN: 'menu-open',
+    SIDEBAR_COLLAPSED: 'sidebar-collapse'
+  };
+  var Default = {
+    trigger: "".concat(Selector.DATA_WIDGET, " ").concat(Selector.LINK),
+    animationSpeed: 300,
+    accordion: true,
+    expandSidebar: false,
+    sidebarButtonSelector: '[data-widget="pushmenu"]'
+  };
+  /**
+   * Class Definition
+   * ====================================================
+   */
+
+  var Treeview = /*#__PURE__*/function () {
+    function Treeview(element, config) {
+      _classCallCheck(this, Treeview);
+
+      this._config = config;
+      this._element = element;
+    } // Public
+
+
+    _createClass(Treeview, [{
+      key: "init",
+      value: function init() {
+        this._setupListeners();
+      }
+    }, {
+      key: "expand",
+      value: function expand(treeviewMenu, parentLi) {
+        var _this = this;
+
+        var expandedEvent = $.Event(Event.EXPANDED);
+
+        if (this._config.accordion) {
+          var openMenuLi = parentLi.siblings(Selector.OPEN).first();
+          var openTreeview = openMenuLi.find(Selector.TREEVIEW_MENU).first();
+          this.collapse(openTreeview, openMenuLi);
+        }
+
+        treeviewMenu.stop().slideDown(this._config.animationSpeed, function () {
+          parentLi.addClass(ClassName.OPEN);
+          $(_this._element).trigger(expandedEvent);
+        });
+
+        if (this._config.expandSidebar) {
+          this._expandSidebar();
+        }
+      }
+    }, {
+      key: "collapse",
+      value: function collapse(treeviewMenu, parentLi) {
+        var _this2 = this;
+
+        var collapsedEvent = $.Event(Event.COLLAPSED);
+        treeviewMenu.stop().slideUp(this._config.animationSpeed, function () {
+          parentLi.removeClass(ClassName.OPEN);
+          $(_this2._element).trigger(collapsedEvent);
+          treeviewMenu.find("".concat(Selector.OPEN, " > ").concat(Selector.TREEVIEW_MENU)).slideUp();
+          treeviewMenu.find(Selector.OPEN).removeClass(ClassName.OPEN);
+        });
+      }
+    }, {
+      key: "toggle",
+      value: function toggle(event) {
+        var $relativeTarget = $(event.currentTarget);
+        var $parent = $relativeTarget.parent();
+        var treeviewMenu = $parent.find('> ' + Selector.TREEVIEW_MENU);
+
+        if (!treeviewMenu.is(Selector.TREEVIEW_MENU)) {
+          if (!$parent.is(Selector.LI)) {
+            treeviewMenu = $parent.parent().find('> ' + Selector.TREEVIEW_MENU);
+          }
+
+          if (!treeviewMenu.is(Selector.TREEVIEW_MENU)) {
+            return;
+          }
+        }
+
+        event.preventDefault();
+        var parentLi = $relativeTarget.parents(Selector.LI).first();
+        var isOpen = parentLi.hasClass(ClassName.OPEN);
+
+        if (isOpen) {
+          this.collapse($(treeviewMenu), parentLi);
+        } else {
+          this.expand($(treeviewMenu), parentLi);
+        }
+      } // Private
+
+    }, {
+      key: "_setupListeners",
+      value: function _setupListeners() {
+        var _this3 = this;
+
+        $(document).on('click', this._config.trigger, function (event) {
+          _this3.toggle(event);
+        });
+      }
+    }, {
+      key: "_expandSidebar",
+      value: function _expandSidebar() {
+        if ($('body').hasClass(ClassName.SIDEBAR_COLLAPSED)) {
+          $(this._config.sidebarButtonSelector).PushMenu('expand');
+        }
+      } // Static
+
+    }], [{
+      key: "_jQueryInterface",
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _options = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new Treeview($(this), _options);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (config === 'init') {
+            data[config]();
+          }
+        });
+      }
+    }]);
+
+    return Treeview;
+  }();
+  /**
+   * Data API
+   * ====================================================
+   */
+
+
+  $(window).on(Event.LOAD_DATA_API, function () {
+    $(Selector.DATA_WIDGET).each(function () {
+      Treeview._jQueryInterface.call($(this), 'init');
+    });
+  });
+  /**
+   * jQuery API
+   * ====================================================
+   */
+
+  $.fn[NAME] = Treeview._jQueryInterface;
+  $.fn[NAME].Constructor = Treeview;
+
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Treeview._jQueryInterface;
+  };
+
+  return Treeview;
+}(jQuery);
+
+/* harmony default export */ __webpack_exports__["default"] = (Treeview);
+
+/***/ }),
+
+/***/ "./resources/assets/js/adminlte.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/adminlte.js ***!
+  \*****************************************/
+/*! exports provided: ControlSidebar, Layout, PushMenu, Treeview, DirectChat, TodoList, CardWidget, CardRefresh, Dropdown, Toasts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ControlSidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ControlSidebar */ "./resources/assets/js/ControlSidebar.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ControlSidebar", function() { return _ControlSidebar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./resources/assets/js/Layout.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return _Layout__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _PushMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PushMenu */ "./resources/assets/js/PushMenu.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PushMenu", function() { return _PushMenu__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _Treeview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Treeview */ "./resources/assets/js/Treeview.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Treeview", function() { return _Treeview__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _DirectChat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DirectChat */ "./resources/assets/js/DirectChat.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DirectChat", function() { return _DirectChat__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+/* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TodoList */ "./resources/assets/js/TodoList.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TodoList", function() { return _TodoList__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var _CardWidget__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CardWidget */ "./resources/assets/js/CardWidget.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CardWidget", function() { return _CardWidget__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _CardRefresh__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CardRefresh */ "./resources/assets/js/CardRefresh.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CardRefresh", function() { return _CardRefresh__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Dropdown */ "./resources/assets/js/Dropdown.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Dropdown", function() { return _Dropdown__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
+/* harmony import */ var _Toasts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Toasts */ "./resources/assets/js/Toasts.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Toasts", function() { return _Toasts__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./resources/js/admin.js":
+/*!*******************************!*\
+  !*** ./resources/js/admin.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/** metode require (node standard) */
+//jQuery
+window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); //overlayScrollbars
+
+__webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/js/OverlayScrollbars.js"); //popper.js
+
+
+__webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js"); //Bootstrap 4
+
+
+__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js"); //AdminLTE
+
+
+__webpack_require__(/*! ../assets/js/adminlte */ "./resources/assets/js/adminlte.js");
+
+/***/ }),
+
+/***/ "./resources/sass/admin.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/admin.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!*******************************************************************************************!*\
+  !*** multi ./resources/js/admin.js ./resources/sass/admin.scss ./resources/sass/app.scss ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! E:\arns\Gitlab\cln\MALINDO\malindowebsite\Src\website\resources\js\admin.js */"./resources/js/admin.js");
+__webpack_require__(/*! E:\arns\Gitlab\cln\MALINDO\malindowebsite\Src\website\resources\sass\admin.scss */"./resources/sass/admin.scss");
+module.exports = __webpack_require__(/*! E:\arns\Gitlab\cln\MALINDO\malindowebsite\Src\website\resources\sass\app.scss */"./resources/sass/app.scss");
+
+
+/***/ })
+
+},[[0,"/js/manifest","/js/vendor"]]]);

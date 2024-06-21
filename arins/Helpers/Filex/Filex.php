@@ -4,7 +4,6 @@ namespace Arins\Helpers\Filex;
 
 use Arins\Helpers\Filex\FilexInterface;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class Filex implements FilexInterface
 {
@@ -57,29 +56,13 @@ class Filex implements FilexInterface
      * 3. upload file from storage
      *    base on disk driver in config file filesystems.php
      * ====================================================== */
-    public function upload($fileName, $fileLocation, $fileObject, $diskDriver='public', $customFileName='')
+    public function upload($fileName, $fileLocation, $fileObject, $diskDriver='public')
     {
         $path = $fileName;
         if ($fileObject) {
-            $fileInfo = explode('.', $fileObject->getClientOriginalName());
-            $fileType = $fileInfo[count($fileInfo)-1];
-            $newCustomFileName = $customFileName . '-' . Str::random(40) . '.' . $fileType;
-
-            //return dd($newCustomFileName);
-    
             if ( ($fileName == '') || ($fileName == null) ) {
-                
-                if ( ($customFileName == '') || ($customFileName == null) ) {
-                    $path = Storage::disk($diskDriver)
-                    ->putFile($fileLocation, $fileObject);
-
-                } else {
-
-                    $path = Storage::disk($diskDriver)
-                    ->putFileAs($fileLocation, $fileObject, $newCustomFileName);
-
-                } //end if
-
+                $path = Storage::disk($diskDriver)
+                        ->putFile($fileLocation, $fileObject);
             }
             else {
                 $path = Storage::disk($diskDriver)
@@ -98,12 +81,12 @@ class Filex implements FilexInterface
      * 4. upload file from storage
      *    base on disk driver in config file filesystems.php
      * ====================================================== */
-    public function uploadTemp($fileObject, $fileTempName, $diskDriver='public', $customFileName='')
+    public function uploadTemp($fileObject, $fileTempName, $diskDriver='public')
     {
         $path = '';
         //create temporary uploaded image
         if ($fileObject) {
-            $path = $this->upload(null, 'temp', $fileObject, $diskDriver, $customFileName);
+            $path = $this->upload(null, 'temp', $fileObject, $diskDriver);
             Filex::delete($fileTempName);
         } else {
             $path = $fileTempName;
@@ -164,13 +147,13 @@ class Filex implements FilexInterface
      *    to real path base on disk driver in config file
      *    filesystems.php
      * ====================================================== */
-    function uploadOrCopyAndRemove($fileName, $fileSourceName, $fileTargetLocation, $fileObject, $diskDriver, $remove, $customFileName)
+    function uploadOrCopyAndRemove($fileName, $fileSourceName, $fileTargetLocation, $fileObject, $diskDriver, $remove)
     {
         //code here
         $path = '';
         if ($fileObject) {
-            $path = $this->upload($fileName, $fileTargetLocation, $fileObject, $diskDriver, $customFileName);
-            //return dd('$fileSourceName = ' . $fileSourceName . ' - $fileTargetLocation = ' . $fileTargetLocation);
+            $path = $this->upload($fileName, $fileTargetLocation, $fileObject, $diskDriver);
+
         } elseif ($fileSourceName) {
             $nPos = strpos($fileSourceName, '/');
             $nPos = ($nPos != '' ? $nPos+1 : $nPos);

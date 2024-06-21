@@ -2,13 +2,13 @@
 
 namespace Arins\Bo\Repositories\UserAdmin;
 
-use Arins\Repositories\Data\EloquentRepository;
+use Arins\Repositories\BaseRepository;
 use Arins\Bo\Repositories\UserAdmin\UserAdminRepositoryInterface;
 
-class UserAdminRepository extends EloquentRepository implements UserAdminRepositoryInterface
+class UserAdminRepository extends BaseRepository implements UserAdminRepositoryInterface
 {
 
-    //Override parent class [EloquentRepository.all()]
+    //Override parent class [BaseRepository.all()]
     public function all()
     {
         return $this->data->where('bo', true)->get();

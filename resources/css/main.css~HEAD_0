@@ -1,0 +1,11 @@
+.image-table-cell {
+    height: 50px;
+}
+
+.image-table-cell img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

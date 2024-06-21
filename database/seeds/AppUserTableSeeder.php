@@ -13,26 +13,27 @@ class AppUserTableSeeder extends Seeder
     {
         //Reset table
         DB::table('app_user')->delete();
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 56, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 67, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 149, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 200, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 329, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 330, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 331, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 332, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 333, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 344, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 335, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 336, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 337, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 338, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 339, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 340, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 341, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 342, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 343, "created_at" => null, "updated_at" => null ]); 
-        DB::table("app_user")->insert([ "app_id" => 4, "user_id" => 257, "created_at" => null, "updated_at" => null ]); 
-                
-    }
-}
+
+        /** user(superadmin@mail.com) */
+        //app(cms)->user(superadmin@mail.com)
+        DB::table('app_user')->insert([
+            'app_id' => 1,  //app(tsk)
+            'user_id' => 1, //user(superadmin@mail.com)
+        ]);
+
+        /** user(postadmin@mail.com) */
+        //app(cms)->user(postadmin@mail.com)
+        DB::table('app_user')->insert([
+            'app_id' => 1,  //app(tsk)
+            'user_id' => 2, //user(postadmin@mail.com)
+        ]);
+
+        /** user(reportadmin@mail.com) */
+        //app(cms)->user(reportadmin@mail.com)
+        DB::table('app_user')->insert([
+            'app_id' => 1,  //app(tsk)
+            'user_id' => 3, //user(reportadmin@mail.com)
+        ]);
+
+    } //end method
+} //end class

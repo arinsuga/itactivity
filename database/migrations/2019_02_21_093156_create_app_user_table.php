@@ -16,7 +16,7 @@ class CreateAppUserTable extends Migration
         Schema::create('app_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('app_id');
-            $table->integer('user_id');
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }

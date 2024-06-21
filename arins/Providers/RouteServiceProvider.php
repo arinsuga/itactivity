@@ -14,9 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Arins\Http\Controllers';
-    protected $namespaceFo = 'Arins\Fo\Http\Controllers';
-    protected $namespaceBo = 'Arins\Bo\Http\Controllers';
+    protected $namespace = 'Arins\Bo\Http\Controllers';
     protected $namespaceA0 = 'Arins\A0\Http\Controllers';
 
     /**
@@ -55,38 +53,22 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapRoutes()
     {
-
-    }
-
-    //Template only routes
-    protected function mapArinsRoutes()
-    {
-        //Arins
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/main.php'));
-
-        //Arins - BO ( Back Office / Admin )
-        Route::middleware('web')
-             ->namespace($this->namespaceBo)
              ->group(base_path('routes/bo.php'));
+    }
 
-        //Arins - FO ( Front Office )
-        Route::middleware('web')
-             ->namespace($this->namespaceFo)
-             ->group(base_path('routes/fo.php'));
-
+    protected function mapArinsRoutes()
+    {
         Route::middleware('web')
              ->namespace($this->namespaceA0)
              ->group(base_path('routes/a0.php'));
     }
 
-    //Testing only routes
     protected function mapDdRoutes()
     {
-        //BO
         Route::middleware('web')
-             ->namespace($this->namespaceBo)
+             ->namespace($this->namespace)
              ->group(base_path('routes/dd.php'));
     }
 

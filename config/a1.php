@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Information
+    |--------------------------------------------------------------------------
+    |
+    | Informasi Apliksi
+    |
+    */
+    'app' => [
+        'mode' => 'mvc',
+    ], //end app
+
+    /*
+    |--------------------------------------------------------------------------
     | Company Information
     |--------------------------------------------------------------------------
     |
@@ -12,13 +24,13 @@ return [
     */
 
     'company' => [
-        'version' => '3.0',
-        'name' => 'IT-Activity',
+        'version' => '1.0',
+        'name' => 'Tasksheet',
         'website' => 'http://appdesk.tech/',
         'address' => [
-            'street1' => 'Jl. Raya',
-            'street2' => 'Gang Utama',
-            'city' => 'Jakarta Selatan'
+            'street1' => 'Gedung tinggi lt 9 kav 12',
+            'street2' => 'Jl. Gatot Raya Gatot Kaca',
+            'city' => 'DKI Jakarta'
         ],
         'copyright' => '2020 - 2021',
         'dateformat' => 'd-m-Y'
@@ -182,6 +194,37 @@ return [
             ],
         
         ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Online Shop
+    |--------------------------------------------------------------------------
+    |
+    | Link Toko online
+    | 
+    |
+    */
+    'onlineshop' => [
+        'shopee' => [
+            'caption' => 'Shopee',
+            'description' => 'Shopee',
+            'link' => 'https://shopee.co.id/maligroperkasa?page=0',
+            'logo' => 'website/img/brands/shopee.png'
+        ],
+        'tokopedia' => [
+            'caption' => 'Tokopedia',
+            'description' => 'Tokopedia',
+            'link' => 'https://www.tokopedia.com/agroperkasa',
+            'logo' => 'website/img/brands/tokopedia.png'
+        ],
+        'bukalapak' => [
+            'caption' => 'Bukalapak',
+            'description' => 'Bukalapak',
+            'link' => 'https://www.bukalapak.com/u/agroperkasa?from=omnisearch&from_keyword_history=false&search_source=omnisearch_user&source=navbar',
+            'logo' => 'website/img/brands/bukalapak.png'
+        ],
+
     ],
 
     /*

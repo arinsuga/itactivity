@@ -1,0 +1,27 @@
+/* LISTROW
+-------------------*/
+.contact .listrow {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .listrow-item {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.contact .listrow-item a img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .contact .listrow {
+        justify-content: center;
+    }
+         
+}

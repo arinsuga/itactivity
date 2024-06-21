@@ -1,0 +1,13 @@
+<script>
+    // flatpickr(".date", {
+    //     enableTime: true,
+    //     dateFormat: "{{ config('a1.datejs.datetime') }}"
+    // });
+    
+    //CKEDITOR.replace( 'description' );
+
+function loadProductsubtype() {
+    // alert('hadir');
+}
+
+</script>

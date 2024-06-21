@@ -3,16 +3,13 @@
 @section('content')
 
 <div class="container">
-    <div class="card">
-    <div class="card-header">
-        <h3>HOME xxx</h3>
+    
+<div class="container">
+    <div class="box" style="border: none;">
+        <img style="width: 90%;" src="{{ asset('img/'.config('a1.uiux.logo_landscape')) }}" alt="">
     </div>
-    <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
+</div>
+
 </div>
 
 

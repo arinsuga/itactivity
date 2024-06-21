@@ -15,23 +15,111 @@ class UsersTableSeeder extends Seeder
     {
         //Reset table
         DB::table('users')->delete();
-        DB::table("users")->insert([ "id" => 1, "name" => "Super Admin", "email" => "superadmin@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 2, "name" => "Admin 1", "email" => "admin1@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 3, "name" => "Admin 2", "email" => "admin2@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 4, "name" => "Guest 1", "email" => "guest1@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 5, "name" => "Guest 2", "email" => "guest2@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 6, "name" => "admin", "email" => "admin@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 7, "name" => "it", "email" => "it@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 8, "name" => "karyawan", "email" => "karyawan@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 9, "name" => "ramayana", "email" => "ramayana@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 10, "name" => "hrd", "email" => "hrd@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 11, "name" => "legal", "email" => "legal@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 12, "name" => "sindhu", "email" => "sindhu@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 13, "name" => "monitoring", "email" => "monitoring@mail.com", "email_verified_at" => now(), "dept" => "null", "noabsen" => null, "password" => Hash::make('hadiprana'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 14, "name" => "Suhendri", "email" => "suhendri@mail.com", "email_verified_at" => now(), "dept" => "DNB", "noabsen" => null, "password" => Hash::make('suh3n'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 15, "name" => "Heri Rahmat", "email" => "heri@mail.com", "email_verified_at" => now(), "dept" => "DNB", "noabsen" => null, "password" => Hash::make('dnbh3r1'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 16, "name" => "Adnan", "email" => "adnan@mail.com", "email_verified_at" => now(), "dept" => "DNB", "noabsen" => null, "password" => Hash::make('4dn4n'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 17, "name" => "Tatang", "email" => "tatang@mail.com", "email_verified_at" => now(), "dept" => "DNB", "noabsen" => null, "password" => Hash::make('dnbt4t4ng'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
-        DB::table("users")->insert([ "id" => 18, "name" => "Zulkfili Febriansyah", "email" => "zulkifli@mail.com", "email_verified_at" => now(), "dept" => "DNB", "noabsen" => null, "password" => Hash::make('plkzul'), "remember_token" => Str::random(10), "bo" => false, "disabled" => false, ]); 
+
+        //Super Admin
+        DB::table('users')->insert([
+            'id' => 1,
+            'name' => 'Super Admin',
+            'email' => 'superadmin@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'bo' => true,
+        ]);
+
+        //Post Admin
+        DB::table('users')->insert([
+            'id' => 2,
+            'name' => 'Post Admin',
+            'email' => 'postadmin@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'bo' => true,
+        ]);
+
+        //Report Admin
+        DB::table('users')->insert([
+            'id' => 3,
+            'name' => 'Report Admin',
+            'email' => 'reportadmin@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'bo' => true,
+        ]);
+
+        //guest 1
+        DB::table('users')->insert([
+            'id' => 4,
+            'name' => 'Guest 1',
+            'email' => 'guest1@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+        ]);
+
+        //guest 2
+        DB::table('users')->insert([
+            'id' => 5,
+            'name' => 'Guest 2',
+            'email' => 'guest2@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+        ]);
+
+
+        //Hadiprana IT
+        DB::table('users')->insert([
+            'id' => 6,
+            'name' => 'joko',
+            'email' => 'joko@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'technician' => true,
+            'bo' => true,
+        ]);
+
+        //Hadiprana IT
+        DB::table('users')->insert([
+            'id' => 7,
+            'name' => 'budi',
+            'email' => 'budi@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'technician' => true,
+            'bo' => true,
+        ]);
+
+        //Hadiprana IT
+        DB::table('users')->insert([
+            'id' => 9,
+            'name' => 'andi',
+            'email' => 'andi@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'technician' => true,
+            'bo' => true,
+        ]);
+
+        //Hadiprana IT
+        DB::table('users')->insert([
+            'id' => 10,
+            'name' => 'arie',
+            'email' => 'arie@mail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123'),
+            'remember_token' => Str::random(10),
+            'technician' => true,
+            'bo' => true,
+        ]);
+
+        //dummy data
+        //factory(App\User::class, 1000)->create();
+
     }
 }

@@ -12,116 +12,147 @@
       </a>
     </li>
 
-    <!-- master data -->
+    <!-- Master Data -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-tag"></i>
         <p>
-          Master Data
+          Master
           <i class="fas fa-angle-left right"></i>
         </p>
       </a>
+
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('mastercategory.index') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Merk</p>
+            <p>Kategori</p>
           </a>
         </li>
+
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('mastersubcategory.index') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Jenis</p>
+            <p>Sub Category</p>
           </a>
         </li>
+
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('masteritem.index') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Tipe</p>
+            <p>Item</p>
           </a>
         </li>
+
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('masterobjectmaintenance.index') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Seri</p>
+            <p>Object Maintenance</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ route('masterproject.index') }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Project</p>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+
+    <!-- Activity -->
+    <li class="nav-item has-treeview">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tag"></i>
+        <p>
+          Activity
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{ route('support.index.today') }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Support</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ route('maintenance.index.today') }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Maintenance / Daily Activity</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ route('project.index.today') }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Project / Action Plan</p>
           </a>
         </li>
       </ul>
     </li>
 
-    <!-- stock barang -->
+    <!-- Input data -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-cubes"></i>
+        <i class="nav-icon fas fa-tag"></i>
         <p>
-          Stock Barang
+          Input Data
           <i class="fas fa-angle-left right"></i>
         </p>
       </a>
       <ul class="nav nav-treeview">
+
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('employee.index') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Tambah Stock</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Edit Stock</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Serah Terima</p>
+            <p>Karyawan</p>
           </a>
         </li>
       </ul>
     </li>
 
-    <!-- laporan -->
+    <!-- Reports -->
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-book"></i>
+        <i class="nav-icon fas fa-tag"></i>
         <p>
-          Laporan
+          Reports
           <i class="fas fa-angle-left right"></i>
         </p>
       </a>
-      <ul class="nav nav-treeview">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Stock</p>
-          </a>
-        </li>
-      </ul>
-    </li>
 
-    <!-- user -->
-    <li class="nav-item has-treeview">
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-users"></i>
-        <p>
-          Users
-          <i class="fas fa-angle-left right"></i>
-        </p>
-      </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="{{ route('UserAdmin.index') }}" class="nav-link">
+          <a href="{{ route('support.report.detail', ['report' => 'report', 'detail' => 'detail']) }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Backend</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('user.index') }}" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Frontend</p>
+            <p>Support</p>
           </a>
         </li>
       </ul>
+
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{ route('maintenance.report.detail', ['report' => 'report', 'detail' => 'detail']) }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Maintenance / Daily Activity</p>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="{{ route('project.report.detail', ['report' => 'report', 'detail' => 'detail']) }}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Project / Action Plan</p>
+          </a>
+        </li>
+      </ul>
+      
     </li>
 
     <!-- Logout -->

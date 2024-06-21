@@ -1,5 +1,12 @@
 {
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.profiles.windows": {
+        "C:\\Program Files\\Git\\bin\\bash.exe (migrated)": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": []
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "C:\\Program Files\\Git\\bin\\bash.exe (migrated)",
     "window.zoomLevel": 2,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveSassCompile.settings.formats":[

@@ -1,0 +1,101 @@
+  /* MAIN ABOUT
+  -------------------------------------------------- */
+.about {
+    min-height: 100vh;
+}
+
+.about-wrapper .nav .nav-item .nav-link img {
+    display: block;
+    position: relative;
+    height: 7rem;
+    width: auto;
+}
+
+.about-wrapper a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.about-wrapper h5.title {
+    text-decoration: underline;
+}
+
+.about-brosuer-list, .about-brand-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-brosuer-list img {
+    width: 20rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.about-brand-list img {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+  /* MAIN ABOUT 1
+  -------------------------------------------------- */
+  .about1-image {
+    width: 100%;
+    height: 100%;
+}
+
+.about1-image .item-full img {
+    margin-bottom: 1rem;
+}
+
+.about1-image .item-full img {
+    width: 100%;
+}
+
+.about1-image .item-nofull {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about1-image .item-nofull img {
+    width: 50%;
+    height: auto;
+}
+
+/* LISTROW
+-------------------*/
+.about .about-wrapper .listrow {
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.about .about-wrapper .listrow-item {
+    display: block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.about .about-wrapper .listrow-item img {
+    width: 110px;
+    height: 110px;
+}
+
+.listrow-item h1,
+.listrow-item h2,
+.listrow-item h3,
+.listrow-item h4,
+.listrow-item h5,
+.listrow-item h6
+{
+    text-align: center;
+    text-decoration: none;
+    color: #231916;
+    width: 100%;
+}

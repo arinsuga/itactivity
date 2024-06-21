@@ -1,0 +1,123 @@
+body {
+padding: 0;
+margin: 0;
+}
+
+.logo-navbar {
+    height: 60px;
+}
+
+.logo-brand {
+    width: 100%;
+    height: auto;
+}
+
+.map-md {
+    width: 100%;
+    height: auto;
+}
+
+.content-section {
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+}
+
+h1.section-title,
+h2.section-title,
+h3.section-title,
+h4.section-title,
+h5.section-title {
+    text-align: center;
+    text-decoration: none;
+}
+
+a.title {
+    text-decoration: none;
+    color: #231916;
+}
+
+.listrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+  
+.listrow.listrow-between {
+  justify-content: space-between;
+}
+
+.listrow-item {
+    display: block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.listrow-item img {
+    height: 100%;
+    width: 100%;
+}
+
+.listrow-item a {
+    text-decoration: none;
+}
+
+.listrow-item a:link {
+    text-decoration-line: none;
+}
+
+.listrow-item h1,
+.listrow-item h2,
+.listrow-item h3,
+.listrow-item h4,
+.listrow-item h5,
+.listrow-item h6
+{
+    text-align: center;
+    text-decoration: none;
+    color: #231916;
+    width: 100%;
+}
+
+.shop .listrow .listrow-item {
+    width: 200px;
+    height: auto;
+}
+
+.shop .listrow .listrow-item img {
+    width: 100%;
+    height: auto;
+}
+
+.table.office-list > :not(caption) > * > * {
+  border: none;
+}
+
+
+
+.contact .form-control,
+.contact .form-select,
+.shop .form-control,
+.shop .form-select {
+    border-color: #DD4145;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .map-md {
+        width: 80%;
+        height: auto;
+    }
+
+    .listrow.listrow-between {
+        justify-content: center;
+      }
+      
+}
+

@@ -2,9 +2,9 @@
 
 namespace Arins\Bo\Repositories\UserAdmin;
 
-use Arins\Repositories\Data\DataRepositoryInterface;
+use Arins\Repositories\BaseRepositoryInterface;
 
-//Inherit interface to DataRepositoryInterface
-interface UserAdminRepositoryInterface extends DataRepositoryInterface
+//Inherit interface to BaseRepositoryInterface
+interface UserAdminRepositoryInterface extends BaseRepositoryInterface
 {
 }

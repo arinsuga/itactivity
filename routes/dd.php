@@ -17,162 +17,80 @@ $roleAdm = env('ADMIN_ROLE_CODE');
 $rolePost = env('POST_ROLE_CODE');
 $roleRpt = env('RPT_ROLE_CODE');
 
-use GuzzleHttp\Client;
-Route::get('/ddgz', function() {
+use Arins\Models\Activity;
+use Arins\Models\Activitytype;
+use Arins\Models\Activitysubtype;
+use Arins\Models\Activitystatus;
+use Arins\Models\Tasktype;
+use Arins\Models\Tasksubtype1;
+Route::get('/dd', function () {
 
-    $baseURL = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    $latlng = 'latlng=-6.2690009,106.8060503';
-    $key = '&key=AIzaSyD5EFW-MruZ6EUSZLU1Ro3TVkUoPPGD0O4';
-    $fullURL = $baseURL . $latlng . $key;
-
-    //return dd($fullURL);
-
-    $fullURL = 'https://api.github.com/repos/guzzle/guzzle';
-    $client = new Client();
-    $response = $client->request('GET', $fullURL);
-
-    // $result = [
-    //     'status' => $response->getStatusCode(),
-    //     'header' => $response->getHeaderLine('content-type'),
-    //     'body'   => $response->getBody()->getContents()
-    // ];
-
-    $result = json_decode($response->getBody()->getContents());
-
-    return dd($result);
-
-    return $result;
+    // $data = Tasksubtype1::with('activities', 'activitytype', 'tasktype')->get();
+    // $data = Activitystatus::with('activities')->get();
+    //$data = Activitysubtype::with('activities', 'activitytype')->get();
+    // $data = Activitytype::with(['activities', 'tasktypes'])->get();
 
 
-    return 'Ini Guzzle';
+    $data = Activity::with([
+        'activitytype',
+        'activitysubtype',
+        'activitystatus',
+        'tasktype',
+        'tasksubtype1',
+        'tasksubtype2'
+        ])->get();
 
+    return $data[0]->tasksubtype2;
 });
 
-Route::get('/dd', function () {
+use Arins\Repositories\Activity\ActivityRepository;
+use Arins\Repositories\Activitytype\ActivitytypeRepository;
+Route::get('dd1', function(){
+    
+    // $model = new Activity();
+    // $data = new ActivityRepository($model);
+    $model = new Activitytype();
+    $data = new ActivitytypeRepository($model);
+    
+    //return $data->all();
+    return $data->allOrderByIdDesc();
+
+    $hasil = json_decode(json_encode($data), false);
+    return strtoupper($hasil->nama);
+});
+
+use Arins\Facades\Filex;
+Route::get('ddfile', function() {
+    $temp = Filex::image('events/event1.png');
+    return $temp;
+});
+
+Route::get('/ddadminrole', function () {
     $roleAdm = env('ADMIN_ROLE_CODE');
 
     $data = new \App\User();
-
-    $coba = [
-        "id" => 1,
-        "nama" => "budi"
-    ];
-    $coba2 = json_encode($coba);
-    $coba2 = json_decode($coba2, FALSE);
-
-    $coba = $data->all();
-    $coba2 = $coba[0];
-
-    return dd($coba2['name']);
+    return 'hasil tes';
 
     return dd($data->getFillable());
 
     return $roleAdm;
 });
 
-Route::get('/ddabsen', function () {
+Route::get('/ddjson', function () {
 
-    $authUser = Auth::user();
-    $user = new \App\user();
-    $data = new \Arins\Models\Fo\Attend();
-
-    return dd($data->find(5)->metadata);
-    return dd($authUser);
-    return dd($user->find(5)->attends->first());
-    return dd($data->first());
-
-    $coba = [
-        "id" => 1,
-        "nama" => "budi"
+    $dataX = [
+        'number' => 12,
+        'string' => 'stringNama',
+        'date' => now(),
     ];
-    $coba2 = json_encode($coba);
-    $coba2 = json_decode($coba2, FALSE);
 
-    $coba = $data->all();
-    $coba2 = $coba[0];
+    $dataStringJson = json_encode($dataX);
+    $dataObject = json_decode($dataStringJson);
+    $data = $dataObject;
 
-    return dd($coba2['name']);
-
-    return dd($data->getFillable());
-
-    return $roleAdm;
+    return dd($data->number);
 });
 
-Route::get('/ddabsen2', function () {
-
-    $coba = new geoPlugin();
-    return dd($coba->locate());
-
-
-	//the geoPlugin server
-	$host = 'http://www.geoplugin.net/php.gp?ip={IP}&base_currency={CURRENCY}&lang={LANG}';
-	//the default base currency
-	$currency = 'USD';
-	//the default language
-	$lang = 'en';
-	//the default ip
-    $ip = '202.77.104.173'; //null; LINK Net
-    $ip = '103.119.144.11'; //null; BALI Fiber
-    
-
-    //update host data
-    $host = str_replace( '{IP}', $ip, $host );
-    $host = str_replace( '{CURRENCY}', $currency, $host );
-    $host = str_replace( '{LANG}', $lang, $host );
-
-    //initiate the geoPlugin vars
-    $response = null;
-    $data = array();
-    $city = null;
-	$region = null;
-	$regionCode = null;
-	$regionName = null;
-	$dmaCode = null;
-	$countryCode = null;
-	$countryName = null;
-	$inEU = null;
-	$euVATrate = false;
-	$continentCode = null;
-	$continentName = null;
-	$latitude = null;
-	$longitude = null;
-	$locationAccuracyRadius = null;
-	$timezone = null;
-	$currencyCode = null;
-	$currencySymbol = null;
-    $currencyConverter = null;
-    
-    if ( function_exists('curl_init') ) {
-						
-        //use cURL to fetch data
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $host);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'geoPlugin PHP Class v1.1');
-        $response = curl_exec($ch);
-        curl_close ($ch);
-        
-    } else if ( ini_get('allow_url_fopen') ) {
-        
-        //fall back to fopen()
-        $response = file_get_contents($host, 'r');
-        
-    } else {
-
-        trigger_error ('geoPlugin class Error: Cannot retrieve data. Either compile PHP with cURL support or enable allow_url_fopen in php.ini ', E_USER_ERROR);
-        return;
-    
-    }
-
-    //convert to JSON
-    if ($response) {
-        $data = unserialize($response);
-    } //end if
-
-    //return $response;
-    return $data;
-
-});
 
 use Arins\Facades\Response;
 Route::get('/dd/response', function () {
@@ -187,6 +105,12 @@ Route::get('/dd/response', function () {
 use Arins\Facades\Formater;
 use Arins\Facades\ConvertDate as Convert;
 Route::get('/dd/formater', function () {
+
+    //date format for database
+    // $tgl = Convert::strDatetimeToDate('15/03/2021 13:00:00');
+    // $result = $tgl;
+    // return dd($result->toDateTimeString());
+
 
     //$initDate = new DateTime;
     //$hh = DateTime::createFromFormat('d M Y', '17 Maret 2019');
@@ -217,7 +141,7 @@ Route::get('/dd/formater', function () {
         'Format date [$formater]' => $formater,
         'Format date result [$formaterResult]' => $formaterResult,
         'Tanggal Hari ini [$now]' => $now];
-   
+
 
     return dd($hasil);
 
@@ -258,12 +182,12 @@ Route::get('/onlyadmin', function() {
     // if (Gate::allows(env('ADMIN_ROLE_CODE'))) {
     //     // The current user can edit settings
     //     return Auth::user()->email.' Behasil!!!';
-    // }    
+    // }
 
     // if (Gate::allows(env('POST_ROLE_CODE'))) {
     //     // The current user can edit settings
     //     return Auth::user()->email.' Behasil!!!';
-    // }    
+    // }
 
 
     Gate::authorize(env('POST_ROLE_CODE'));
@@ -272,7 +196,7 @@ Route::get('/onlyadmin', function() {
     // if (Gate::any(['ADMIN_ROLE_CODE', 'POST_ROLE_CODE'])) {
     //     // The user can update or delete the post
     //     return Auth::user()->email.' Behasil!!! BRO';
-    // }    
+    // }
 
 
     return Auth::user()->email.' this is only for admin';

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon-32x32.png') }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/'.config('a1.uiux.favicon')) }}"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -11,6 +11,9 @@
   <title>{{ config('a1.company.name', 'Demo') }}</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/flatpickr/flatpickr.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/select2/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     
 
@@ -51,8 +54,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('home.index') }}" class="brand-link">
-      <img id="logoFull" src="{{ asset('img/logo.jpg') }}" alt="{{ config('a1.company.name','Demo') }}" class="brand-image elevation-3 logo-full">
-      <img id="logoIcon" src="{{ asset('img/favicon-32x32.png') }}" alt="{{ config('a1.company.name','Demo') }}" class="brand-image elevation-3 logo-icon">
+      <img id="logoFull" src="{{ asset('img/'.config('a1.uiux.logo_landscape')) }}" alt="{{ config('a1.company.name','Demo') }}" class="brand-image elevation-3 logo-full">
+      <img id="logoIcon" src="{{ asset('img/'.config('a1.uiux.logo_icon')) }}" alt="{{ config('a1.company.name','Demo') }}" class="brand-image elevation-3 logo-icon">
       <span class="brand-text font-weight-light"></span>
     </a>
 
@@ -110,7 +113,6 @@
     </section>
     <!-- /.content -->
   </div>
-  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; {{ config('a1.company.copyright', '2020') }} <a href="{{ config('a1.company.website', route('home.index')) }}">{{ config('a1.company.name', 'Demo') }}</a>.</strong>
@@ -130,8 +132,18 @@
 
 
     <!-- Scripts -->
-    <script src="{{ asset('js/manifest.js') }}" defer></script>
-    <script src="{{ asset('js/vendor.js') }}" defer></script>
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
+    <script src="{{ asset('js/admin.js') }}"></script>
+    <script src="{{ asset('lib/flatpickr/flatpickr.js') }}"></script>
+    <script src="{{ asset('lib/flatpickr/lang/id.js') }}"></script>
+    <script src="{{ asset('lib/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('plugins/select2/select2.min.js') }}" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        
     <script src="{{ asset('js/main.js') }}" defer></script>
     @yield('js')
 

@@ -2,10 +2,7 @@
 
 namespace Arins\Bo\Repositories\User;
 
-use Arins\Repositories\Data\DataRepositoryInterface;
-
-interface UserRepositoryInterface extends DataRepositoryInterface
+interface UserRepositoryInterface
 {
     function all();
-    function dnb();
 }
