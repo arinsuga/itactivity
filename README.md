@@ -1,2 +1,2 @@
-# itactivity
+# ITActivity
 IT Activity Tracking
